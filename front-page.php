@@ -68,7 +68,7 @@
 
 
 			<div class="col-sm-8 col-sm-offset-2">
-				<button class="copyright"><p>&copy; Anatolii Lukavenko 2018</p></button>
+				<button class="copyright"><p>&copy; Anatolii Lukavenko <?php echo date("Y"); ?></p></button>
 			</div>
 
 

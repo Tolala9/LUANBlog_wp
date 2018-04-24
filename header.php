@@ -5,7 +5,10 @@
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 
-	<!-- <title>LUAN Blog | <?php the_title(); ?></title> -->
+	<title><?php wp_title(' | ', 'echo', 'right'); ?><?php bloginfo('name'); ?> </title>
+
+	
+
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,7 +67,7 @@
   									'container' => '',
   									'items_wrap' => '%3$s' 
 									)); ?>
-									
+
 								</ul>
 							</nav> 
 						</div>
