@@ -4565,7 +4565,7 @@ ul {
       padding-left: 5px;
       font-size: 14px;
       letter-spacing: 1px;
-      text-transform: uppercase;
+      /*text-transform: uppercase;*/ 
       font-weight: 300;
       line-height: 34px;
       border: none; }
