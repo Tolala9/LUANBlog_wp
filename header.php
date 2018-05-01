@@ -79,10 +79,7 @@
 						
 						
 						<div class="col-xs-6 col-xs-offset-3  col-sm-2 col-sm-offset-0">
-							<form class="search-field">
-								<input type="text" placeholder="Search..." name="search">
-								<button class="submit"><i class="fab fa-searchengin"></i></button>
-							</form>
+							<?php get_search_form(); ?>
 						</div>
 						
 

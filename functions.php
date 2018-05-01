@@ -1,6 +1,6 @@
 <?php 
 /*hide admin bar*/ 
-show_admin_bar(true);
+show_admin_bar(false);
 
 
 
