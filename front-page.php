@@ -24,10 +24,10 @@
 			<div class="col-sm-8 col-sm-offset-2">
 				<div class="home-follow">
 					<div class="home-follow-box"><p>Follow me:</p></div>
-					<a class="folow-item" href="#" ><i class="fab fa-linkedin-in"></i></a>
-					<a  class="folow-item" href="#"><i class="fab fa-facebook-f"></i></a>
-					<a class="folow-item" href="#"><i class="fab fa-git"></i></a>
-					<a class="folow-item" href="#"><i class="fab fa-internet-explorer"></i></a>
+					<a class="folow-item" title="LinkedIn" href="#" ><i class="fab fa-linkedin-in"></i></a>
+					<a  class="folow-item" title="Facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+					<a class="folow-item" title="Git" href="#"><i class="fab fa-git"></i></a>
+					<a class="folow-item" title="Site" href="#"><i class="fab fa-internet-explorer"></i></a>
 				</div>
 			</div>
 <!--End Follow section -->
@@ -68,7 +68,7 @@
 
 
 			<div class="col-sm-8 col-sm-offset-2">
-				<button class="copyright"><p>&copy; Anatolii Lukavenko <?php echo date("Y"); ?></p></button>
+				<div class="copyright"><p>&copy; Anatolii Lukavenko <?php echo date("Y"); ?></p></div>
 			</div>
 
 

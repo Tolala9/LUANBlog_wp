@@ -53,7 +53,7 @@
 					<div class="col-sm-12 col-xs-12">
 						
 						<div class="col-xs-1 col-sm-1 col-sm-offset-2 col-xs-offset-2"> 
-							<div class="logo"><a class="no-copy" href="<?php echo site_url('/') ?>">L<sup>b</sup></a></div>
+							<div class="logo" title="Home"><a class="no-copy" href="<?php echo site_url('/') ?>">L<sup>b</sup></a></div>
 
 						</div>
 						
@@ -73,7 +73,7 @@
 						</div>
 
 						<div class="col-xs-1  col-sm-1 col-sm-offset-1 ">
-							<div class="search-box"><a class="no-copy" href="#">S<sup>h</sup></a></div>
+							<div class="search-box" title="Search"><a class="no-copy" href="#">S<sup>h</sup></a></div>
 
 						</div>
 						
