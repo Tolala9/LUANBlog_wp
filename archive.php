@@ -63,13 +63,7 @@ its archive file
 									$tagID = get_the_tags();
 									echo tag_description( $tagID[0] );
 									} 
-									// elseif (is_author()) {
-										
-									// echo the_user_meta( 'description' );
-										
-									// }
-
-
+									
 									?></p>
 
 								</div>
