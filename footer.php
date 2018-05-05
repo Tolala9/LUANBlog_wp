@@ -1,7 +1,7 @@
 
-
+</div>
 <!-- FOOTER -->
-<footer>
+<footer class="footer">
 	<div class="header-line">
 		<div class="container">
 			<div class="row">

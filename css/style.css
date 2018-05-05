@@ -44,7 +44,9 @@
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%; 
+  box-sizing: border-box;
+}
 
 body {
   margin: 0; }
@@ -5258,10 +5260,9 @@ ul {
 /* ********** CONTENT NOT FOUND WP PAGE STLE ************* */
 /* ********** STICKY FOOTER STYLE ************* */
 .footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0; }
+  height: 40px; }
+.content {
+  min-height: calc(100vh - 40px); }
 
 /* ********** END STICKY FOOTER STYLE ************* */
 /* ********** 404 PAGE STYLE ************* */
@@ -5714,5 +5715,5 @@ ul {
 
 @media only screen and (min-width: 1400px) {
   .content-not-found-container {
-    margin-top: 30px;
-    padding-top: 200px; } }
+    /*margin-top: 30px;*/
+    /*padding-top: 150px;*/ } }

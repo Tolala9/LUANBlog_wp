@@ -37,6 +37,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<div class="content">
 <!-- PRELOADER -->
 <div class="lds-css ng-scope">
 <div style="width:100%;height:100%" class="lds-wedges">
@@ -76,7 +77,7 @@
 							<div class="search-box" title="Search"><a class="no-copy" href="#">S<sup>h</sup></a></div>
 
 						</div>
-						
+						 
 						
 						<div class="col-xs-6 col-xs-offset-3  col-sm-2 col-sm-offset-0">
 							<?php get_search_form(); ?>
