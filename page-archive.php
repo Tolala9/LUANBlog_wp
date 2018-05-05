@@ -81,6 +81,23 @@
 			</div>
 
 
+			<div class="archive-item archive-item-popularpost">
+				<div class="arch-item-title">
+					<a href="#">Popular Posts</a>
+				</div>
+				<div class="gray-line"></div>
+				<div class="arch-item-content">
+					<ul>
+						<li><a href="#">The first post about something...</a></li>
+						<li><a href="#">The first post about something...</a></li>
+						<li><a href="#">The first post about something...</a></li>
+					</ul>
+					
+
+				</div>
+			</div>
+
+
 			
 		</div>
 
