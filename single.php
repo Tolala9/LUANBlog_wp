@@ -15,7 +15,7 @@ Its single page
 		?>
 		has-thumbnail <?php } ?>
 
-	">
+		">
 
 		<!-- IMG container -->
 		<div class="container">
@@ -48,40 +48,63 @@ Its single page
 							<div class="post-date-postpage">
 								<div class="gray-line"></div>
 								<span class="date-wrap-postpage"><span class="day-postpage"><?php the_time('j') ?></span><span class="month-postpage">
-								<?php the_time('F Y') ?></span></span>
-							</div>
-							<div class="post-text-wrap-postpage">
-								<div class="post-text-small-postpage">
-									<h3><?php the_title(); ?></h3>
-									<p>
-										<?php the_content(); ?>
-									</p>
-									<div class="gray-line"></div>
-									<div class="post-footer-postpage"> 
-										<i class="far fa-user"></i><a href="#">By Anatolii </a>
-										<div class="post-action-postpage">
-											<i class="far fa-share-square"></i><i class="far fa-star"></i>
+									<?php the_time('F Y') ?></span></span>
+								</div>
+
+								<div class="post-tags-wrap">
+									<div class="post-tags-postpage">
+										<div class="post-tags-iconpostpage">
+											<a href="#"><i class="fas fa-tags"></i></a>
+										</div>
+										<div class="post-tags-contentpostpage">
+											<ul>
+												<li><a href="#">CSS</a></li>
+												<li><a href="#">Web</a></li>
+												<li><a href="#">Mobile</a></li>
+												<li><a href="#">Desctop</a></li>
+												<li><a href="#">Settings</a></li>
+												<li><a href="#">fix</a></li>
+												<li><a href="#">Quick_fix</a></li>
+											</ul>
+										</div>
+										<div class="gray-line"></div>
+									</div>
+								</div>
+
+
+
+								<div class="post-text-wrap-postpage">
+									<div class="post-text-small-postpage">
+										<h3><?php the_title(); ?></h3>
+										<p>
+											<?php the_content(); ?>
+										</p>
+										<div class="gray-line"></div>
+										<div class="post-footer-postpage"> 
+											<i class="far fa-user"></i><a href="#">By Anatolii </a>
+											<div class="post-action-postpage">
+												<i class="far fa-share-square"></i><i class="far fa-star"></i>
+											</div>
 										</div>
 									</div>
 								</div>
+								
+
 							</div>
-							
 
 						</div>
 
 					</div>
-
 				</div>
 			</div>
+
 		</div>
+		<!--END POST ITEM -->
 
-	</div>
-	<!--END POST ITEM -->
-
-	
+		
 
 
-<?php	endwhile;
+	<?php	endwhile;
 
 else:
 
