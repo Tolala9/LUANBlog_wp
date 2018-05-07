@@ -46,8 +46,8 @@
 <script src="<?php echo get_template_directory_uri(); ?>/libs/respond/respond.min.js"></script>
 <![endif]-->
 
+ 
 
-<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.min.js"></script>
 
 
 <?php wp_footer(); ?>

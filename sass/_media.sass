@@ -1,0 +1,569 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.header-line
+		form.search-field
+			input[type=text]
+				width: 75%
+			button.submit 
+				.fab
+
+
+	.home-follow
+		a.folow-item
+			flex-basis: 10%
+
+	.wide-row
+		a.category-item
+			width: 19%
+			height: 120px
+			margin: 40px 10px 0px
+			p
+				font-size: 25px
+				line-height: 27px
+			i
+				font-size: 38px
+		a.category-item:nth-child(even)
+			width: 25%
+			height: 120px
+			margin: 40px 10px 0px
+
+	.archive-item-search
+		form.archive-search-field
+			background-color: $white
+			padding: 0
+			input[type=text]
+				width: 75%
+	.archive-item
+		&-socials
+			.arch-item-content
+				ul
+					li
+						a
+							margin: 7px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.header-line
+		form.search-field
+			input[type=text]
+				width: 67%
+			button.submit 
+				.fab
+					font-size: 16px
+
+
+	.post-item
+		.post-inf
+			.post-text-small
+				h3
+					line-height: 20px
+				p
+					line-height: 18px
+			.post-date
+				span
+					padding-top: 1px
+					font-size: 14px
+			.post-cat
+				font-size: 20px
+
+	.pagination-wrap
+		.pagination-items
+			.num-btn
+				ul
+					li
+						a
+							font-size: 14px
+			.next-btn, .prev-btn
+				font-size: 14px
+
+	.home-follow
+		a.folow-item
+			flex-basis: 13%
+
+
+	.wide-row
+		a.category-item
+			width: 22%
+			height: 100px
+			margin: 40px 5px 0px
+			p
+				font-size: 20px
+				line-height: 20px
+			i
+				font-size: 38px
+		a.category-item:nth-child(even)
+			width: 28%
+			height: 100px
+			margin: 40px 5px 0px
+
+
+	.archive-item
+		&-socials
+			.arch-item-content
+				ul
+					li
+						a
+							margin: 6px
+
+	.post-item-postpage			
+		.post-inf-postpage
+			.post-cat-postpage
+				font-size: 18px
+				line-height: 18px
+			.post-date-postpage
+				font-size: 18px
+				line-height: 37px
+
+	.search-page-block-info
+		&__title
+		&__intro
+		
+	.search-page-block-action
+		&__title
+			font-size: 20px
+			line-height: 20px
+		&__box
+		form.search-field-large
+			input[type=text]
+
+	.search-page-block-info
+		margin-top: 40px
+		&__title
+			font-size: 20px
+		&__intro
+		
+	.search-page-block-action
+		margin-top: 40px
+		&__title
+			font-size: 20px
+			line-height: 20px
+		&__box
+		form.search-field-large
+			input[type=text]
+			button.submit 
+				.fab
+					font-size: 18px
+
+	.post-item 
+		.post-text-wrap 
+			.post-text-small 
+				.post-footer
+					.post-tags
+						&-content
+							ul
+								li
+									a
+										font-size: 12px
+										margin: 2px 2px 0
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.menu-line
+		ul
+			justify-content: center
+			li
+				a
+					font-size: 14px
+					
+	.header-line
+		form.search-field
+			input[type=text]
+				width: 90%
+				font-size: 12px
+			button.submit 
+				width: 5%
+				.fab
+					font-size: 16px
+
+	.pagination-wrap
+		.pagination-items
+			.num-btn
+				ul
+					li
+						a
+							width: 50%
+
+	.top
+		width: 40px
+		height: 40px
+		line-height: 40px
+		&.active
+			right: 30px
+
+
+
+	.home-follow
+		a.folow-item
+			flex-basis: 12%
+
+
+	.wide-row
+		a.category-item
+			width: 22%
+			height: 140px
+			margin: 40px 5px 0px
+			p
+				font-size: 20px
+				line-height: 20px
+			i
+				font-size: 38px
+		a.category-item:nth-child(even)
+			width: 28%
+			height: 140px
+			margin: 40px 5px 0px
+
+	.archive-page-block
+		&__title
+			font-size: 20px
+			line-height: 20px
+		&__intro
+			font-size: 14px
+			line-height: 18px
+
+
+	.search-page-block-info
+		margin-top: 20px
+		&__title
+			font-size: 20px
+		&__intro
+		
+	.search-page-block-action
+		margin-top: 20px
+		&__title
+			font-size: 20px
+			line-height: 20px
+		&__box
+		form.search-field-large
+			input[type=text]
+			button.submit 
+				.fab
+					font-size: 18px
+
+	.content-not-found-container
+		padding-top: 50px
+		h1
+			font-size: 30px
+		h2
+		.fas
+
+
+	
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.header-line
+		.menu-line
+			display: none
+
+	.header-line
+		form.search-field
+			input[type=text]
+				display: inline-block
+				width: 80%
+				font-size: 10px
+			button.submit 
+				// display: none
+				width: 5%
+				.fab
+					font-size: 16px
+
+
+	.post-item:first-child
+		margin-top: 20px 
+
+
+
+	.post-item
+		.post-inf
+			flex-flow: row wrap
+			.post-cat
+				flex: 1
+				height: 40px
+				font-size: 18px
+				span
+					padding: 2px 3px 0px
+					margin: auto
+					line-height: 35px
+			.post-cat
+				a
+					padding: 2px 3px 0px
+					margin: auto
+					line-height: 35px
+			.post-date
+				flex: 1
+				height: 38px
+				margin-top: 2px
+				font-size: 18px
+				flex-direction: row
+				// padding-top: 7px
+				.gray-line
+					display: none
+				.date-wrap
+					display: flex
+					flex-flow: row wrap
+					justify-content: center
+					margin-top: 7px
+					.day
+						flex: 1
+						font-size: 20px
+						font-weight: 600
+						line-height: 20px
+						// margin-left: 20px
+					.month
+						flex: 3
+						// margin-right: 20px
+
+	.pagination-wrap
+		.pagination-items
+			.num-btn
+				ul
+					li
+						a
+							width: 50%
+				
+
+				
+		.post-text-wrap
+			display: flex
+			flex-flow: column wrap
+			.post-text-small
+				flex: 1
+
+
+	.home-title
+		h2
+			font-size: 22px
+			line-height: 22px
+		h3
+			font-size: 16px
+			line-height: 20px
+		p.quote
+			font-size: 14px
+			line-height: 17px
+		p.author-quote
+			font-size: 14px
+			line-height: 14px
+
+	.home-follow
+		height: 45px
+		.home-follow-box
+			font-size: 18px
+			line-height: 18px
+			text-align: center
+		a.folow-item
+			flex-basis: 13%
+			font-size: 16px
+
+
+	.contact-flex-wrap
+		flex-direction: column
+		height: 200px
+		margin-bottom: 10px
+		.home-contact-box
+			flex-basis: 20%
+			font-size: 18px
+			line-height: 18px
+			text-align: center
+		.credential-box
+			flex-basis: 40%
+			input
+				font-size: 12px
+				.name-field
+					flex-basis: 50%
+				.email-field
+					flex-basis: 50%
+		textarea.message
+			flex-basis: 30%
+			font-size: 12px
+
+	.contact-send
+		font-size: 18px
+
+	.copyright
+		p
+			font-size: 12px
+
+	
+
+	.wide-row
+		a.category-item
+			width: 22%
+			height: 100px
+			margin: 40px 5px 0px
+			p
+				font-size: 18px
+				line-height: 20px
+			i
+				font-size: 30px
+		a.category-item:nth-child(even)
+			width: 28%
+			height: 100px
+			margin: 40px 5px 0px
+
+
+
+	.post-item-postpage			
+		.post-inf-postpage
+			.post-cat-postpage
+			.post-date-postpage
+				span.date-wrap-postpage
+					.day-postpage
+						flex: 1
+					.month-postpage
+						flex: 3
+		.post-text-wrap-postpage
+			.post-text-small-postpage
+				h3
+				p	
+					font-size: 16px
+					line-height: 22px
+
+				
+	.archive-page-block
+		margin-top: 20px
+
+
+	.search-page-block-info
+		margin-top: 20px
+		&__title
+			font-size: 20px
+		&__intro
+		
+	.search-page-block-action
+		margin-top: 20px
+		&__title
+			font-size: 20px
+			line-height: 20px
+		&__box
+		form.search-field-large
+			input[type=text]
+			button.submit 
+				.fab
+					font-size: 18px
+
+
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 375px)
+	.toggle-mnu 
+		right: 20px
+		top: 0px
+
+	.post-item
+		.post-inf
+			.post-date
+				.date-wrap
+					// margin-top: 0px
+					.day
+						flex: 1
+					.month
+						flex: 6
+
+	.pagination-wrap
+		.pagination-items
+
+			.num-btn
+				ul
+					li
+						a
+							width: 70%
+							font-size: 12px
+			.next-btn, .prev-btn
+				width: 100%
+				font-size: 12px
+
+
+	.wide-row
+		a.category-item
+			width: 22%
+			height: 80px
+			margin: 40px 5px 0px
+			p
+				font-size: 16px
+				line-height: 18px
+			i
+				font-size: 28px
+		a.category-item:nth-child(even)
+			width: 28%
+			height: 80px
+			margin: 40px 5px 0px
+
+
+	.post-item-postpage			
+		.post-inf-postpage
+			.post-cat-postpage
+				font-size: 18px
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	.toggle-mnu 
+		display: none
+
+	.page-title
+		display: none
+
+	.post-item
+		.post-text-wrap
+			display: flex
+			flex-flow: column wrap
+			flex: 6
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.wide-row
+		a.category-item
+			width: 20%
+			height: 140px
+			margin: 40px 20px 0px
+			p
+				font-size: 25px
+				line-height: 27px
+				text-align: center
+			i
+				font-size: 38px
+		a.category-item:nth-child(even)
+			width: 30%
+			height: 140px
+			margin: 40px 20px 0px
+
+	
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-height : 900px)
+	.pw-category //make footer on bottom if dont have enough content
+		margin-bottom: 240px
+	.archive-item-featurepost
+		margin-bottom: 345px
+
+@media only screen and (min-width : 1400px)
+	.content-not-found-container
+		margin-top: 30px
+		padding-top: 200px

@@ -2,6 +2,15 @@
 /*hide admin bar*/ 
 show_admin_bar(false);
 
+// Styles
+function university_files()
+  {
+    
+    wp_enqueue_style('university_main_styles', get_stylesheet_uri(), NULL, microtime());
+    wp_enqueue_script('main-university-js', get_theme_file_uri('js/scripts.min.js'), NULL, microtime(), true);
+
+  }
+add_action('wp_enqueue_scripts', 'university_files');
 
 
 //Support Features 

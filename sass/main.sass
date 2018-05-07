@@ -1,0 +1,1332 @@
+
+@import "fonts"
+@import "libs"
+@import "vars"  
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+.no-copy
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+// .row-no-padding-left > [class*="col-"]
+// 	padding-left: 0 !important;		
+.nopadding-left
+	padding-left: 0 !important;
+
+.nopadding-right
+	padding-right: 0 !important;
+
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	// height: 100%
+	background-color: $bg
+	box-sizing: border-box
+	// position: relative
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+button
+	border: none
+	text-decoration: none
+	border-radius: 0px
+	outline: none
+
+
+*::selection
+	background-color: $accent
+
+a
+	&:hover
+		text-decoration: none
+	&:focus
+		text-decoration: none
+	&:active
+		text-decoration: none
+	&:visited
+		text-decoration: none
+
+ul
+	list-style-type: none
+	padding: 0
+	margin: 0
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.h1, .h2, .h3, .h4, .h5, .h6
+	line-height: 1.4
+	text-transform: uppercase
+
+.text-center
+	text-align: center
+
+
+
+/* ********** Page Preloader ************* */
+// body.preloader-site
+// 	overflow: hidden
+
+.lds-css, .ng-scope
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	z-index: 300
+	background-color: $bg
+
+@keyframes lds-wedges
+	0%
+		-webkit-transform: rotate(0deg)
+		transform: rotate(0deg)
+
+	100%
+		-webkit-transform: rotate(360deg)
+		transform: rotate(360deg)
+
+
+@-webkit-keyframes lds-wedges
+	0%
+		-webkit-transform: rotate(0deg)
+		transform: rotate(0deg)
+
+	100%
+		-webkit-transform: rotate(360deg)
+		transform: rotate(360deg)
+
+
+.lds-wedges
+	position: relative
+	left: 50%
+	top: 50vh
+	margin: 
+		left: -100px
+		top: -100px
+	> div
+		> div
+			-webkit-transform-origin: 100px 100px
+			transform-origin: 100px 100px
+			-webkit-animation: lds-wedges 3s linear infinite
+			animation: lds-wedges 3s linear infinite
+			opacity: 0.8
+			> div
+				position: absolute
+				left: 30px
+				top: 30px
+				width: 70px
+				height: 70px
+				border-radius: 70px 0 0 0
+				-webkit-transform-origin: 100px 100px
+				transform-origin: 100px 100px
+		div
+			&:nth-child(1)
+				> div
+					background: #28B78C
+					-webkit-transform: rotate(0deg)
+					transform: rotate(0deg)
+				-webkit-animation-duration: 0.75s
+				animation-duration: 0.75s
+			&:nth-child(2)
+				> div
+					background: #2ed1a0
+					-webkit-transform: rotate(0deg)
+					transform: rotate(0deg)
+				-webkit-animation-duration: 1s
+				animation-duration: 1s
+			&:nth-child(3)
+				> div
+					background: #58dab3
+					-webkit-transform: rotate(0deg)
+					transform: rotate(0deg)
+				-webkit-animation-duration: 1.5s
+				animation-duration: 1.5s
+			&:nth-child(4)
+				> div
+					background: #82e3c6
+					-webkit-transform: rotate(0deg)
+					transform: rotate(0deg)
+				-webkit-animation-duration: 3s
+				animation-duration: 3s
+	width: 200px !important
+	height: 200px !important
+	-webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px)
+	transform: translate(-100px, -100px) scale(1) translate(100px, 100px)
+
+/* ********** END Page Preloader ************* */
+
+
+/* ********** BLOG PAGE STLE ************* */
+
+/* HEADER */
+.header-line
+	width: 100%
+	height: 40px
+	background-color: $dark_block
+
+	.logo
+		display: block
+		width: 40px
+		height: 40px
+		background-color: $white
+		font-family: cinzel-ex, sans-serif
+		font-size: 38px
+		line-height: 46px
+		a
+			color: $accent
+		sup
+			font-size: 25px
+
+	.search-box
+		width: 40px
+		height: 40px
+		background-color: $white
+		float: right
+		font-family: cinzel-ex, sans-serif
+		font-size: 38px
+		line-height: 46px
+		a
+			color: $accent
+		sup
+			font-size: 25px
+	form.search-field
+		display: none
+		background-color: $white
+		padding: 0
+		// margin-top: 3px
+		input[type=text]
+			width: 80%
+			border: none
+			outline: none
+			padding-left: 5px
+			line-height: 38px
+			background-color: $white
+			// text-transform: uppercase
+			font-size: 14px
+		button.submit 
+			background-color: $white
+			border:none
+			display: inline-block
+			border: none
+			text-decoration: none
+			border-radius: 0px
+			outline: none
+			.fab
+				color: $accent
+				font-size: 18px
+
+
+.menu-line
+	display: flex
+	line-height: 40px
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		flex: 1
+		display: flex
+		justify-content: space-between
+		li
+			flex: 1
+			width: 30%
+			display: flex
+			// flex-direction: row
+			a
+				margin: auto
+				text-transform: uppercase
+				color: $white
+				font-weight: 300
+				transition: ease 0.3s
+				&:hover, &:focus
+					text-decoration: none
+					color: $white
+					font-weight: 500
+					letter-spacing: 0.5px
+				&:active, .current-menu-item
+					color: $dark_text
+					background-color: $white
+			&.active, .current-menu-item
+				a
+					color: $dark_text
+					background-color: $white
+					padding: 0 5px
+					&:hover, &:focus
+						color: $dark_text
+						background-color: $white
+						letter-spacing: 0px
+						font-weight: 300
+/* END HEADER */
+
+/* PAGE TITLE */
+.page-title
+	margin: 5px 0
+	.title-flex
+		display: flex
+		justify-content: space-between
+		.blog-title
+			flex-basis: 40%;
+			margin: auto
+			text-align: center
+			text-transform: uppercase
+			color: $dark_text
+			font-weight: 300
+			font-size: 14px
+			background-color: $white
+			line-height: 30px
+/* END PAGE TITLE */
+
+
+/* POST ITEM */
+.post-item
+	margin-top: 40px
+
+	.post-inf
+		display: flex
+		
+		.post-cat
+			flex: 1
+			background-color: $accent
+			color: $white
+			height: 90px
+			font-size: 22px
+			font-weight: 300
+			text-transform: uppercase
+			display: flex
+			flex-direction: column
+			
+			span
+				padding: 7px 3px 0px
+				margin: auto
+				line-height: 35px
+				// text-align: center
+				flex: 15
+			.gray-line
+				flex: 1
+				background-color: $bg
+				width: 100%
+
+		.post-cat	
+			a
+				color: $white	
+				padding: 7px 3px 0px
+				margin: auto
+				line-height: 35px
+				// text-align: center
+				flex: 15
+
+
+		.post-date
+			flex: 1
+			background-color: $light_block
+			color: $light_text
+			height: 90px
+			font-size: 25px
+			font-weight: 300
+			text-transform: uppercase
+			display: flex
+			flex-direction: column
+			span
+				margin: auto
+				font-size: 16px
+				line-height: 17px
+				text-align: center
+				flex: 15
+				padding: 5px 3px 0px
+				.day
+					display: block
+					text-align: center
+					font-size: 33px
+					font-weight: 800
+					line-height: 40px
+			.gray-line
+				flex: 1
+				background-color: $bg
+				width: 100%
+	.post-text-wrap
+		display: flex
+		// flex: 6
+		.post-text-small
+			flex: 6
+			background-color: $white
+
+			h3
+				color: $dark_text
+				font-size: 20px
+				font-weight: 500
+				margin: 10px 20px 5px
+				line-height: 24px
+			p
+				color: $dark_text
+				font-size: 14px
+				font-weight: 300
+				margin: 0px 20px 10px
+				text-align: justify
+			.gray-line
+				display: block
+				background-color: $bg
+				width: 93%
+				height: 1px
+				margin: 0 20px 
+
+
+			.post-footer
+				display: flex
+				flex-flow: row wrap
+				margin: 5px 20px 10px
+				font-size: 14px
+				.far
+					font-size: 12px
+					color: $light_text
+					margin-right: 5px
+				a
+					color: $light_text
+					transition: ease 0.5s
+					&:hover
+						color: $accent
+				.post-author
+					flex: 2
+					display: flex
+					align-items: center
+					line-height: 14px
+				.post-tags
+					flex: 8
+					display: flex
+					&-icon
+						flex: 1
+						.fas
+							font-size: 12px
+							&:hover
+								color: $accent
+								cursor: pointer
+					&-content
+						flex: 24
+						margin-top: 2px
+						ul
+							list-style-type: none
+							margin: 0px 3px
+							overflow: hidden;
+							li
+								float: left
+								margin-left: 0
+								padding: 0
+								a
+									display: block
+									margin: 2px 4px 0
+									padding: 3px
+									font-size: 14px
+									font-weight: 500
+									color: $dark_text
+									line-height: 14px
+									background-color: $light_block
+									transition: ease 0.3s
+									&:hover
+										color: $white
+										background-color: $accent
+				.post-action
+					flex: 1
+					display: flex
+					justify-content: flex-end
+					align-items: center
+					.far
+						font-size: 12px
+						&:hover
+							color: $accent
+							cursor: pointer
+
+
+
+
+
+			
+/* END POST ITEM */			
+
+
+
+/* PAGINATION */	
+.pagination-wrap
+	margin: 40px 40px
+	.pagination-items
+		display: flex
+		justify-content: space-betwen
+		
+		.num-btn
+			flex: 2
+			display: flex
+			ul
+				list-style-type: none
+				padding: 0
+				margin: 0
+				flex: 1
+				display: flex
+				justify-content: space-between
+				li
+					flex: 1
+					display: flex
+					a
+						display: flex
+						margin: auto
+						text-transform: uppercase
+						color: $white
+						font-size: 15px
+						font-weight: 300
+						background-color: $light_text
+						width: 70%
+						transition: ease 0.5s
+						&:hover, &:focus
+							text-decoration: none
+							color: $dark_text
+							background-color: $white
+						&:active 
+							color: $dark_text
+							background-color: $white
+					span
+						margin: auto
+					&.active
+						a
+							color: $dark_text
+							background-color: $white
+							font-weight: 400
+							transition: ease 0.5s
+							&:hover, &:focus
+								color: $dark_text
+								background-color: $white
+								font-weight: 400
+
+		.next-btn, .prev-btn
+			flex: 1
+			display: flex
+			a
+				display: flex
+				margin: auto
+				background-color: $light_text
+				color: $white
+				width: 70%
+				transition: ease 0.5s
+				&:hover, &:focus
+					text-decoration: none
+					color: $dark_text
+					background-color: $white
+				span
+					text-transform: uppercase
+					margin: auto
+/* END PAGINATION */
+
+
+/* TOGGLE BUTTON */	
+$w: 28px
+$h: 3px
+
+.sandwich 
+	width: $w
+	height: $w
+	position: absolute
+	top: 8px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 200
+.sw-topper, .sw-bottom, .sw-footer
+	background-color: $accent
+.sw-topper
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	display: block
+			
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 2.2
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+	display: block
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 4.5
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: all 0.5s
+	transition-delay: 0.1s
+	display: block
+.sandwich.active
+	.sw-topper
+		top: 9px
+		transform: rotate(-45deg)
+	.sw-bottom
+		top: 6px
+		transform: rotate(45deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+/* END TOGGLE BUTTON */	
+
+/* TOGGLE MENU */
+.toggle-mnu 
+	background-color: $white
+	width: 40px
+	height: 40px
+	float: right
+	position: fixed
+	z-index: 100
+	border: none  
+	right: 30px
+	top: 0px
+	&:focus
+		outline: none
+
+/* TOGGLE MENU */
+.top-mnu
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.9)
+	z-index: 50
+	right: 0
+	top: 0
+	display: none
+	ul,li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	ul
+		margin-top: 100px
+		text-align: center
+		li
+			a
+				color: #fff
+				display: block
+				text-transform: uppercase
+				height: 60px 
+				
+				span
+					display: block
+					position: relative
+					top: -40px
+					left: 0
+					height: 100%
+					transition: ease 0.5s
+					&:hover
+						background-color: rgba(255,255,255,.08)
+/* END TOGGLE MENU */
+
+/* TOP BUTTON */
+.top
+	position: fixed
+	bottom: 20px
+	// right: 100px
+	right: -100px
+	// transform: rotate(90deg) 
+	font-size: 28px 
+	z-index: 12
+	// border-radius: 10px 
+	background-color: $white
+	width: 64px
+	height: 64px
+	text-align: center
+	line-height: 64px
+	cursor: pointer
+	tansition: all .3s ease
+	opacity: .5
+	transition: ease 0.5s
+	&:hover
+		opacity: 1
+	&.active
+		right: 20px
+/* END TOP BUTTON */
+/* ********** END BLOG PAGE STLE ************* */
+
+
+/* ********** HOME PAGE STLE ************* */
+.home-title
+	font-family: "cinzel-ex", sans-serif
+	font-weight: 400
+	color: $dark_text
+	h2
+		text-transform: uppercase
+		font-size: 26px
+		text-align: center
+		margin-top: 40px
+		margin-bottom: 10px
+		line-height: 26px
+	h3
+		text-transform: uppercase
+		font-size: 19px
+		text-align: center
+		margin-top: 0
+	p.quote
+		font-size: 17px
+		text-align: justify
+		line-height: 20px
+		margin-bottom: 0px
+	p.author-quote
+		font-size: 17px
+		text-align: right
+		line-height: 17px
+		color: $accent
+		margin-top: 0px
+		margin-bottom: 0
+
+.home-image
+	margin: 35px 0 40px
+
+/* FOLLOW SECTION */
+.home-follow
+	display: flex
+	justify-content: space-between
+	height: 60px
+	margin-bottom: 40px
+
+	.home-follow-box
+		flex-basis: 30%
+		display: flex
+		background-color: $white
+		font-size: 25px
+		text-transform: uppercase
+		font-weight: 300
+		line-height: 25px
+		p
+			margin: auto
+
+	
+	a.folow-item
+		flex-basis: 8%
+		display: flex
+		line-height: 50px
+		font-size: 20px
+		background-color: $light_block
+		i
+			margin: auto
+			color: $light_text
+		&:hover, &:focus
+			i
+				color: $accent
+/* END FOLLOW SECTION */
+
+/* CONTACT SECTION */
+.contact-flex-wrap
+	display: flex
+	justify-content: space-between
+	height: 90px
+	margin-bottom: 18px
+
+	.home-contact-box
+		flex-basis: 30%
+		display: flex
+		background-color: $white
+		font-size: 25px
+		text-transform: uppercase
+		font-weight: 300
+		line-height: 25px
+		p
+			margin: auto
+
+	.credential-box
+		flex-basis: 30%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		input
+			background-color: $white
+			padding-left: 5px
+			font-size: 14px
+			letter-spacing: 1px
+			// text-transform: uppercase
+			font-weight: 300
+			line-height: 34px
+			border: none
+			&:focus
+				outline: none
+			.name-field
+				flex-basis: 40%
+				// background-color: $white
+			.email-field
+				flex-basis: 40%
+				// background-color: $white
+
+
+	textarea.message
+		flex-basis: 30%
+		display: flex
+		background-color: $white
+		padding-left: 5px
+		font-size: 14px
+		letter-spacing: 1px
+		font-weight: 300
+		line-height: 20px
+		border: none
+		resize: none
+		&:focus
+			outline: none
+
+.contact-send
+	display: inline-block
+	flex: 1	
+	width: 100%
+	height: 30px
+	font-size: 22px
+	text-transform: uppercase
+	font-weight: 300
+	line-height: 25px
+	transition: ease 0.7s
+	margin-bottom: 40px
+	p
+		margin: auto
+		letter-spacing: 6px
+	&:hover
+		background-color: $accent
+		color: $white
+	
+/* END CONTACT SECTION */
+
+.copyright
+	display: flex
+	width: 100%
+	background-color: transparent
+	margin-bottom: 40px
+	p
+		margin: auto
+		text-transform: uppercase
+		font-size: 14px
+		font-weight: 300
+		line-height: 14px
+		letter-spacing: 3px
+/* ********** END HOME PAGE STLE ************* */
+
+
+/* ********** CATEGORY PAGE STLE ************* */
+
+.wide-row
+	display: flex
+	font-size: "dosis-ex", sans-serif
+	justify-content: space-between
+	flex-direction: row
+	flex-wrap: wrap
+	a.category-item
+		display: flex
+		width: 20%
+		height: 140px
+		margin: 40px 20px 0px
+		background-color: $light_text
+		color: $white
+		flex-direction: column
+		transition: ease 0.3s
+		p
+			margin: auto
+			margin-top: 0
+			font-size: 25px
+			font-weight: 300
+			text-transform: uppercase
+			text-align: center
+		i
+			margin: auto
+			margin-bottom: 10px
+			font-size: 38px
+		&:hover
+			background-color: $accent
+
+	a.category-item:nth-child(even)
+		display: flex
+		width: 30%
+		height: 140px
+		margin: 40px 20px 0px
+		background-color: $light_text
+		color: $white
+		flex-direction: column
+		transition: ease 0.3s	
+		&:hover
+			background-color: $accent
+/* ********** END CATEGORY PAGE STLE ************* */
+
+/* ********** ARCHIVE PAGE STLE ************* */
+.archive-item
+	margin-top: 40px
+	background-color: $white
+	&-recentpost, 
+	&-featurepost, 
+	&-categories, 
+	&-search, 
+	&-tags,
+	&-popularpost,
+	&-socials
+		.arch-item-title
+			a
+				display: block
+				text-align: center
+				color: $dark_text
+				font-size: 20px
+				line-height: 20px
+				padding: 10px 
+				transition: ease 0.3s
+				&:hover
+					color: $accent
+		.gray-line
+			height: 1px
+			background-color: $bg
+			width: 100%
+		.arch-item-content
+			padding: 5px 8px 15px
+			ul
+				list-style-type: circle
+				margin-left: 25px
+				li
+					margin: 0
+					padding: 0
+					a
+						display: block
+						font-size: 14px
+						font-weight: 300
+						color: $dark_text
+						line-height: 10px
+						transition: ease 0.3s
+						&:hover
+							color: $accent
+							font-weight: 400
+
+.archive-item-categories
+	.arch-item-content
+		a
+			text-transform: uppercase
+.archive-item-search
+	form.archive-search-field
+		background-color: $white
+		padding: 0
+		input[type=text]
+			width: 80%
+			border: none
+			outline: none
+			padding: 8px
+			line-height: 38px
+			background-color: $white
+			// text-transform: uppercase
+			font-size: 14px
+		button.submit 
+			background-color: $white
+			border:none
+			display: inline-block
+			border: none
+			text-decoration: none
+			border-radius: 0px
+			outline: none
+			.fab
+				color: $accent
+				font-size: 18px
+
+.archive-item
+	&-tags
+		.arch-item-content
+			ul
+				list-style-type: none
+				margin: 0px 3px
+				overflow: hidden;
+				li
+					float: left
+					margin-lef: 0
+					padding: 0
+					a
+						display: block
+						margin: 4px
+						padding: 3px
+						font-size: 14px
+						font-weight: 500
+						color: $dark_text
+						line-height: 14px
+						background-color: $light_block
+						transition: ease 0.3s
+						&:hover
+							color: $white
+							background-color: $accent
+.archive-item
+	&-socials
+		.arch-item-content
+			ul
+				list-style-type: none
+				margin: 0px 3px
+				overflow: hidden;
+				li
+					float: left
+					margin-lef: 0
+					padding: 0
+					a
+						display: block
+						width: 30px
+						height: 30px
+						margin: 8px
+						text-align: center
+						font-size: 14px
+						font-weight: 500
+						color: $dark_text
+						line-height: 30px
+						background-color: $light_block
+						transition: ease 0.3s
+						&:hover
+							color: $white
+							background-color: $accent
+
+/* make fotter on bottom */	
+.archive-item-featurepost
+	margin-bottom: 65px
+/* ********** END ARCHIVE PAGE STLE ************* */
+
+
+/* ********** CATEGORY PAGE STLE ************* */
+.post-item-postpage
+	margin-top: 40px
+	margin-bottom: 40px
+
+	.post-inf-postpage
+		display: flex
+		flex-flow: row wrap
+		.post-cat-postpage
+			flex: 1
+			background-color: $accent
+			color: $white
+			height: 40px
+			font-size: 22px
+			line-height: 22px
+			font-weight: 300
+			text-transform: uppercase
+			display: flex
+			flex-direction: column
+			span
+				padding: 7px 3px 0px
+				margin: auto
+				line-height: 35px
+				// text-align: center
+				flex: 15
+			.gray-line
+				flex: 1
+				background-color: $bg
+				width: 100%
+
+		.post-cat-postpage	
+			a
+				color: $white	
+				padding: 0px
+				margin: auto
+				line-height: 35px
+				// text-align: center
+				flex: 15
+
+
+		.post-date-postpage
+			flex: 1
+			background-color: $light_block
+			color: $light_text
+			height: 40px
+			font-size: 22px
+			font-weight: 300
+			text-transform: uppercase
+			display: flex
+			flex-direction: column
+			span.date-wrap-postpage
+				display: flex
+				flex-flow: row wrap
+				justify-content: space-around
+				text-align: center
+				flex: 15
+				.day-postpage
+					flex: 1
+					text-align: right
+				.month-postpage
+					flex: 2
+					text-align: left
+					padding-left: 5px
+			.gray-line
+				flex: 1
+				background-color: $bg
+				width: 100%
+
+
+		.post-tags-wrap
+			display: flex
+			width: 100%
+			background-color: $white
+			.post-tags-postpage
+				display: flex
+				margin: 10px 20px 0
+				.post-tags-iconpostpage
+					flex: 1
+					.fas
+						font-size: 12px
+						color: $light_text
+						&:hover
+							color: $accent
+							cursor: pointer
+				.post-tags-contentpostpage
+					flex: 24
+					margin-top: 2px
+					ul
+						list-style-type: none
+						margin: 0px 3px
+						overflow: hidden
+						li
+							float: left
+							margin-left: 0
+							padding: 0
+							a
+								display: block
+								margin: 2px 4px 0
+								padding: 3px
+								font-size: 14px
+								font-weight: 500
+								color: $dark_text
+								line-height: 14px
+								background-color: $light_block
+								transition: ease 0.3s
+								&:hover
+									color: $white
+									background-color: $accent
+	
+
+	.post-text-wrap-postpage
+		display: flex
+		.post-text-small-postpage
+			flex: 6
+			background-color: $white
+
+			h3
+				color: $dark_text
+				font-size: 22px
+				font-weight: 500
+				margin: 10px 20px 5px
+				line-height: 24px
+			p
+				color: $dark_text
+				font-size: 16px
+				line-height: 28px
+				font-weight: 300
+				margin: 0px 20px 10px
+				text-align: justify
+			.gray-line
+				display: block
+				background-color: $bg
+				width: 93%
+				height: 1px
+				margin: 0 20px 
+			.post-footer-postpage
+				margin: 5px 20px 10px
+				font-size: 14px
+				color: $light_text
+				.far
+					font-size: 12px
+					color: $light_text
+					margin-right: 10px
+				a
+					color: $light_text
+					transition: ease 0.5s
+					&:hover
+						color: $accent
+				.post-action-postpage
+					display: inline-block
+					float: right
+					.far
+						font-size: 12px
+						&:hover
+							color: $accent
+							cursor: pointer
+
+
+
+/* ********** END CATEGORY PAGE STYLE ************* */
+
+
+/* ********** ARCHIVE WP PAGE STLE ************* */
+.archive-page-block
+	margin-top: 40px
+	background-color: $white
+
+	// padding: 10px 0 10px
+	// text-align: center
+	&__title
+		display: inline-block
+		background-color: $white
+		// padding: 0 5px 0 5px
+		margin: 0 
+		padding: 10px 10px 0px
+		font-family: dosis-ex, sans-serif
+		font-weight: 300
+		font-size: 25px
+		line-height: 25px
+		color: $dark_text
+
+	&__intro
+		background-color: $light_block
+		padding: 5px 10px 10px
+		color: $dark_text
+		font-size: 16px
+		line-height: 20px
+		p
+			margin: 0
+
+	hr
+		margin: 0
+
+
+/* ********** END ARCHIVE WP PAGE STLE ************* */
+
+/* ********** SEARCH WP PAGE STLE ************* */
+.search-page-block-info
+	margin-top: 40px
+	background-color: $accent
+	&__title
+		display: inline-block
+		margin: 0 
+		padding: 10px 10px 0px
+		font-family: dosis-ex, sans-serif
+		font-weight: 300
+		font-size: 25px
+		line-height: 25px
+		color: $white
+
+	&__intro
+		background-color: $light_block
+		padding: 5px 10px 10px
+		color: $dark_text
+		font-size: 16px
+		line-height: 20px
+		p
+			margin: 0
+
+	hr
+		margin: 0
+
+.search-page-block-action
+	margin-top: 40px
+	background-color: $white
+	text-align: center
+	&__title
+		display: inline-block
+		background-color: $white
+		margin: 0 
+		padding: 10px 10px 0px
+		font-family: dosis-ex, sans-serif
+		font-weight: 300
+		font-size: 25px
+		line-height: 25px
+		color: $dark_text
+
+	&__box
+		background-color: $white
+		padding: 3px 3px 3px
+		color: $dark_text
+		font-size: 16px
+		line-height: 20px
+
+	form.search-field-large
+		background-color: $white
+		padding: 0
+		input[type=text]
+			width: 80%
+			border: none
+			outline: none
+			padding-left: 5px
+			line-height: 47px
+			background-color: $white
+			font-size: 16px
+		button.submit 
+			background-color: $white
+			border:none
+			display: inline-block
+			border: none
+			text-decoration: none
+			border-radius: 0px
+			outline: none
+			.fab
+				color: $accent
+				font-size: 22px
+
+
+	hr
+		margin: 0
+
+
+/* ********** END SEARCH WP PAGE STLE ************* */
+
+/* ********** CONTENT NOT FOUND WP PAGE STLE ************* */
+.content-not-found-container
+	padding-top: 100px
+	text-align: center
+	h1
+		margin: 0
+		font-size: 50px
+		font-weight: 200
+		letter-spacing: 8px
+		margin-bottom: 20px
+	h2
+		margin: 0
+		font-weight: 300
+	.fas
+		font-size: 150px
+		color: $accent
+
+/* ********** CONTENT NOT FOUND WP PAGE STLE ************* */
+
+/* ********** STICKY FOOTER STYLE ************* */
+.footer //add class
+	height: 40px
+.content 
+	min-height: calc(100vh - 40px)
+
+
+
+/* ********** END STICKY FOOTER STYLE ************* */
+
+
+/* ********** 404 PAGE STYLE ************* */
+
+/* ********** END 404 PAGE STYLE ************* */
+
+
+
+
+
+
+
+
+
+@import "media" // Always at the end

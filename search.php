@@ -200,5 +200,4 @@ endif;
 <!-- END TOP BUTTON --> 
 
 <!-- Footer -->
-</div>
 <?php get_footer(); ?>
