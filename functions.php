@@ -2,7 +2,7 @@
 /*hide admin bar*/ 
 show_admin_bar(false);
 
-// Styles
+// Styles & Scripts linking
 function university_files()
   {
     

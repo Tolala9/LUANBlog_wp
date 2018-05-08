@@ -324,18 +324,15 @@ ul {
           color: #FAFAFA;
           font-weight: 500;
           letter-spacing: 0.5px; }
-        .menu-line ul li a:active, .menu-line ul li a .current-menu-item {
+    .menu-line ul .current-menu-item {
+      background-color: #FAFAFA; }
+      .menu-line ul .current-menu-item a {
+        color: #27323a; }
+        .menu-line ul .current-menu-item a:hover, .menu-line ul .current-menu-item a:focus {
+          text-decoration: none;
           color: #27323a;
-          background-color: #FAFAFA; }
-      .menu-line ul li.active a, .menu-line ul li .current-menu-item a {
-        color: #27323a;
-        background-color: #FAFAFA;
-        padding: 0 5px; }
-        .menu-line ul li.active a:hover, .menu-line ul li.active a:focus, .menu-line ul li .current-menu-item a:hover, .menu-line ul li .current-menu-item a:focus {
-          color: #27323a;
-          background-color: #FAFAFA;
-          letter-spacing: 0px;
-          font-weight: 300; }
+          font-weight: 300;
+          letter-spacing: 0; }
 
 /* END HEADER */
 /* PAGE TITLE */
