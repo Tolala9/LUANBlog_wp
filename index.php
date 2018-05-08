@@ -19,7 +19,7 @@ its index file
 
 
 <div class="posts-wrap ">
-	<!-- POST ITEM -->
+	<!-- POST ITEM --> 
 
 
 	<?php	if (have_posts()) : 
@@ -87,7 +87,12 @@ its index file
 													<a href="#"><i class="fas fa-tags"></i></a>
 												</div>
 												<div class="post-tags-content">
-													<ul>
+													
+														<?php the_tags('' ,'' ,''); ?>
+													
+
+													
+													<!-- <ul>
 														<li><a href="#">CSS</a></li>
 														<li><a href="#">Web</a></li>
 														<li><a href="#">Mobile</a></li>
@@ -95,7 +100,7 @@ its index file
 														<li><a href="#">Settings</a></li>
 														<li><a href="#">fix</a></li>
 														<li><a href="#">Quick_fix</a></li>
-													</ul>
+													</ul> -->
 
 
 												</div>

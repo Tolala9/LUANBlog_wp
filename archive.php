@@ -39,7 +39,7 @@ its archive file
 									single_tag_title();
 								} elseif (is_author()) {
 									the_post();
-									echo 'Author Archives: ' . get_the_author();
+									echo 'Author Archives:  ' . get_the_author();
 									rewind_posts();
 								} elseif (is_day()) {
 									echo 'Daily Archives: ' . get_the_date();

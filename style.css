@@ -498,7 +498,7 @@ ul {
         -webkit-flex-flow: row wrap;
             -ms-flex-flow: row wrap;
                 flex-flow: row wrap;
-        margin: 5px 20px 10px;
+        margin: 5px 20px 5px;
         font-size: 14px; }
         .post-item .post-text-wrap .post-text-small .post-footer .far {
           font-size: 12px;
@@ -538,7 +538,8 @@ ul {
             -webkit-box-flex: 1;
             -webkit-flex: 1;
                 -ms-flex: 1;
-                    flex: 1; }
+                    flex: 1;
+            margin-right: 3px; }
             .post-item .post-text-wrap .post-text-small .post-footer .post-tags-icon .fas {
               font-size: 12px; }
               .post-item .post-text-wrap .post-text-small .post-footer .post-tags-icon .fas:hover {
@@ -550,29 +551,21 @@ ul {
                 -ms-flex: 24;
                     flex: 24;
             margin-top: 2px; }
-            .post-item .post-text-wrap .post-text-small .post-footer .post-tags-content ul {
-              list-style-type: none;
-              margin: 0px 3px;
-              overflow: hidden; }
-              .post-item .post-text-wrap .post-text-small .post-footer .post-tags-content ul li {
-                float: left;
-                margin-left: 0;
-                padding: 0; }
-                .post-item .post-text-wrap .post-text-small .post-footer .post-tags-content ul li a {
-                  display: block;
-                  margin: 2px 4px 0;
-                  padding: 3px;
-                  font-size: 14px;
-                  font-weight: 500;
-                  color: #27323a;
-                  line-height: 14px;
-                  background-color: #dee4e4;
-                  -webkit-transition: ease 0.3s;
-                  -o-transition: ease 0.3s;
-                  transition: ease 0.3s; }
-                  .post-item .post-text-wrap .post-text-small .post-footer .post-tags-content ul li a:hover {
-                    color: #FAFAFA;
-                    background-color: #28B78C; }
+            .post-item .post-text-wrap .post-text-small .post-footer .post-tags-content a {
+              display: inline-block;
+              margin: 2px 4px 0;
+              padding: 3px;
+              font-size: 14px;
+              font-weight: 500;
+              color: #27323a;
+              line-height: 14px;
+              background-color: #dee4e4;
+              -webkit-transition: ease 0.3s;
+              -o-transition: ease 0.3s;
+              transition: ease 0.3s; }
+              .post-item .post-text-wrap .post-text-small .post-footer .post-tags-content a:hover {
+                color: #FAFAFA;
+                background-color: #28B78C; }
         .post-item .post-text-wrap .post-text-small .post-footer .post-action {
           -webkit-box-flex: 1;
           -webkit-flex: 1;
