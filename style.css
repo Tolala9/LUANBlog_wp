@@ -364,6 +364,9 @@ ul {
 /* POST ITEM */
 .post-item {
   margin-top: 40px; }
+  .post-item .post-img .wp-post-image {
+    width: 100%;
+    height: auto; }
   .post-item .post-inf {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1261,6 +1264,9 @@ ul {
 .post-item-postpage {
   margin-top: 40px;
   margin-bottom: 40px; }
+  .post-item-postpage .post-img .wp-post-image {
+    width: 100%;
+    height: auto; }
   .post-item-postpage .post-inf-postpage {
     display: -webkit-box;
     display: -webkit-flex;
