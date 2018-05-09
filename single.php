@@ -57,15 +57,7 @@ Its single page
 											<a href="#"><i class="fas fa-tags"></i></a>
 										</div>
 										<div class="post-tags-contentpostpage">
-											<ul>
-												<li><a href="#">CSS</a></li>
-												<li><a href="#">Web</a></li>
-												<li><a href="#">Mobile</a></li>
-												<li><a href="#">Desctop</a></li>
-												<li><a href="#">Settings</a></li>
-												<li><a href="#">fix</a></li>
-												<li><a href="#">Quick_fix</a></li>
-											</ul>
+											<?php the_tags('' ,'' ,''); ?>
 										</div>
 										<div class="gray-line"></div>
 									</div>
@@ -81,7 +73,7 @@ Its single page
 										</p>
 										<div class="gray-line"></div>
 										<div class="post-footer-postpage"> 
-											<i class="far fa-user"></i><a href="#">By Anatolii </a>
+											<i class="far fa-user"></i><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">By <?php the_author() ?> </a>
 											<div class="post-action-postpage">
 												<i class="far fa-share-square"></i><i class="far fa-star"></i>
 											</div>

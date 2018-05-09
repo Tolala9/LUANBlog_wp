@@ -1405,7 +1405,8 @@ ul {
           -webkit-box-flex: 1;
           -webkit-flex: 1;
               -ms-flex: 1;
-                  flex: 1; }
+                  flex: 1;
+          margin-right: 5px; }
           .post-item-postpage .post-inf-postpage .post-tags-wrap .post-tags-postpage .post-tags-iconpostpage .fas {
             font-size: 12px;
             color: #8a959b; }
@@ -1418,29 +1419,21 @@ ul {
               -ms-flex: 24;
                   flex: 24;
           margin-top: 2px; }
-          .post-item-postpage .post-inf-postpage .post-tags-wrap .post-tags-postpage .post-tags-contentpostpage ul {
-            list-style-type: none;
-            margin: 0px 3px;
-            overflow: hidden; }
-            .post-item-postpage .post-inf-postpage .post-tags-wrap .post-tags-postpage .post-tags-contentpostpage ul li {
-              float: left;
-              margin-left: 0;
-              padding: 0; }
-              .post-item-postpage .post-inf-postpage .post-tags-wrap .post-tags-postpage .post-tags-contentpostpage ul li a {
-                display: block;
-                margin: 2px 4px 0;
-                padding: 3px;
-                font-size: 14px;
-                font-weight: 500;
-                color: #27323a;
-                line-height: 14px;
-                background-color: #dee4e4;
-                -webkit-transition: ease 0.3s;
-                -o-transition: ease 0.3s;
-                transition: ease 0.3s; }
-                .post-item-postpage .post-inf-postpage .post-tags-wrap .post-tags-postpage .post-tags-contentpostpage ul li a:hover {
-                  color: #FAFAFA;
-                  background-color: #28B78C; }
+          .post-item-postpage .post-inf-postpage .post-tags-wrap .post-tags-postpage .post-tags-contentpostpage a {
+            display: inline-block;
+            margin: 2px 4px 0;
+            padding: 3px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #27323a;
+            line-height: 14px;
+            background-color: #dee4e4;
+            -webkit-transition: ease 0.3s;
+            -o-transition: ease 0.3s;
+            transition: ease 0.3s; }
+            .post-item-postpage .post-inf-postpage .post-tags-wrap .post-tags-postpage .post-tags-contentpostpage a:hover {
+              color: #FAFAFA;
+              background-color: #28B78C; }
   .post-item-postpage .post-text-wrap-postpage {
     display: -webkit-box;
     display: -webkit-flex;
