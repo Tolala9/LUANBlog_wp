@@ -75,7 +75,7 @@ Its single page
 
 								<div class="post-text-wrap-postpage">
 									<div class="post-text-small-postpage">
-										<h3><?php the_title(); ?></h3>
+										<h1><?php the_title(); ?></h1>
 										<p>
 											<?php the_content(); ?>
 										</p>

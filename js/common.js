@@ -115,6 +115,13 @@ $(document).ready(function($) {
     Body.addClass('preloader-site');
 });
 
+/*Highlighting Code block on post content*/
+
+$('pre code').each(function(i, block) {
+  hljs.highlightBlock(block);
+});
+
+
 
 
 

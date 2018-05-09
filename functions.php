@@ -8,6 +8,8 @@ function university_files()
     
     wp_enqueue_style('university_main_styles', get_stylesheet_uri(), NULL, microtime());
     wp_enqueue_script('main-university-js', get_theme_file_uri('js/scripts.min.js'), NULL, microtime(), true);
+    wp_enqueue_script('highlight-js', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js');
+    wp_enqueue_style('highlight-css', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css');
 
   }
 add_action('wp_enqueue_scripts', 'university_files');

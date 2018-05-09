@@ -1128,23 +1128,92 @@ $h: 3px
 
 	.post-text-wrap-postpage
 		display: flex
+		width: 100%
 		.post-text-small-postpage
 			flex: 6
 			background-color: $white
+			width: 100%
 
+			h1
+				color: $dark_text
+				font-size: 28px
+				font-weight: 500
+				margin: 15px 20px 20px
+				line-height: 28px
+				letter-spacing: 1px
+				text-decoration: underline
+			h2
+				color: $dark_text
+				font-size: 26px
+				font-weight: 500
+				margin: 15px 20px 20px
+				line-height: 26px
+				letter-spacing: 1px
 			h3
+				color: $dark_text
+				font-size: 24px
+				font-weight: 500
+				margin: 10px 20px 10px
+				line-height: 24px
+				letter-spacing: 1px
+			h4
 				color: $dark_text
 				font-size: 22px
 				font-weight: 500
-				margin: 10px 20px 5px
-				line-height: 24px
+				margin: 10px 20px 10px
+				line-height: 22px
+				letter-spacing: 1px
 			p
 				color: $dark_text
 				font-size: 16px
-				line-height: 28px
+				line-height: 24px
 				font-weight: 300
 				margin: 0px 20px 10px
 				text-align: justify
+			a
+				color: $accent
+			strong
+				font-weight: 600
+				color: $light_text
+			blockquote
+				background: $light_block
+				border-left: 10px solid $accent
+				margin: 1.5em 10px
+				padding: 0.5em 10px
+				quotes: "“" "”" "‘" "’"
+				&:before
+					color: $white
+					content: open-quote
+					font-size: 4em
+					line-height: 0.1em
+					margin-right: 0.25em
+					vertical-align: -0.4em
+				p
+					display: inline
+					margin: 0
+			ul
+				list-style-type: none
+				margin: 0px 20px 0px
+				list-style-position: inside
+				li
+					padding-left: 5px
+					&::before
+						content: "\f0da"
+						color: $accent
+						font-family: font-awesome-sol
+						font-size: 20px
+						padding-right: 5px
+			img
+				width: 100%
+				height: auto
+			pre
+				margin: 10px 20px 10px
+			.hljs
+				background-color: $light_block
+
+
+
+
 			.gray-line
 				display: block
 				background-color: $bg

@@ -36,10 +36,10 @@ its archive file
 									// single_cat_title();
 									single_cat_title('All Posts from Category / ');
 								} elseif (is_tag()) {
-									single_tag_title('All Post with Tag / ');
+									single_tag_title('All Posts with Tag / ');
 								} elseif (is_author()) {
 									the_post();
-									echo 'All Post by / ' . get_the_author();
+									echo 'All Posts by / ' . get_the_author();
 									rewind_posts();
 								} elseif (is_day()) {
 									echo 'Daily Archives: ' . get_the_date();
