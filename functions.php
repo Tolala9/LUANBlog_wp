@@ -30,7 +30,7 @@ add_action('wp_enqueue_scripts', 'university_files');
 
 // Add Featured image support
 add_theme_support('post-thumbnails');
-add_image_size('blog-thumbnail', 730, 294, array('center', 'top')); 
+add_image_size('blog-thumbnail', 730, 294, array('center', 'center')); 
 
 
 		

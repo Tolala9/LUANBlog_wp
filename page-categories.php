@@ -1,157 +1,67 @@
 <?php get_header(); ?> 
-	<!--END HEADER -->
-	
-	<!-- Category items  -->
+<!--END HEADER -->
+
+
+<!-- Category items  -->
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-sm-12">		
-		<div class="col-sm-8 col-sm-offset-2">
+			<div class="col-sm-8 col-sm-offset-2">
 
 
-			<div class="wide-row">
+				<div class="wide-row">
 
-				<a class="category-item" href="#">
-					<i class="fab fa-stripe-s"></i>
-					<p>Sublime text</p>
-				</a>
 
-				<a class="category-item" href="#">
-					<i class="fab fa-php"></i>
-					<p>php</p>
-				</a>
+					<?php
+					$categories = get_categories( array(
+						'orderby' => 'name',
+						'order'   => 'ASC'
+					) );
 
-				<a class="category-item" href="#">
-					<i class="fab fa-gulp"></i>
-					<p>gulp</p>
-				</a>
+					foreach( $categories as $category ) {
+						$category_link = sprintf( 
+							'<a href="%1$s" alt="%2$s">%3$s</a>',
+							esc_url( get_category_link( $category->term_id ) ),
+							esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
+							esc_html( $category->name )
+						);
+						?>
 
-				<a class="category-item" href="#">
-					<i class="fab fa-sass"></i>
-					<p>sass</p>
-				</a>
+						<a class="category-item" title="<?php echo $category->description ?>" href="<?php echo esc_url(get_category_link( $category->term_id )); ?>">
+							<p class="cat-count"><?php echo $category->count ?></p>
+							<i class="fas fa-anchor"></i>
+							<p class="cat-name"><?php echo esc_html( $category->name ); ?></p>
 
-				<a class="category-item" href="#">
-					<i class="fab fa-wordpress-simple"></i>
-					<p>wp</p>
-				</a>
 
-				<a class="category-item" href="#">
-					<i class="fab fa-stripe-s"></i>
-					<p>Sublime text</p>
-				</a>
+						</a>
 
-				<a class="category-item" href="#">
-					<i class="fab fa-stripe-s"></i>
-					<p>Sublime text</p>
-				</a>
 
-				<a class="category-item" href="#">
-					<i class="fab fa-stripe-s"></i>
-					<p>Sublime text</p>
-				</a>
+						<?php    
+					} 
 
-				<a class="category-item" href="#">
-					<i class="fab fa-stripe-s"></i>
-					<p>Sublime text</p>
-				</a>
+					?>
 
-<!-- 				<a class="category-item" href="#">
-					<i class="fab fa-stripe-s"></i>
-					<p>Sublime text</p>
-				</a>
 
-				<a class="category-item" href="#">
-					<i class="fab fa-php"></i>
-					<p>php</p>
-				</a>
 
-				<a class="category-item" href="#">
-					<i class="fab fa-gulp"></i>
-					<p>gulp</p>
-				</a>
+				</div>
 
-				<a class="category-item" href="#">
-					<i class="fab fa-stripe-s"></i>
-					<p>Sublime text</p>
-				</a>
-
-				<a class="category-item" href="#">
-					<i class="fab fa-php"></i>
-					<p>php</p>
-				</a>
-
-				<a class="category-item" href="#">
-					<i class="fab fa-gulp"></i>
-					<p>gulp</p>
-				</a> -->
 
 			</div>
-
-
 		</div>
 	</div>
-</div>
 </div>	
 
 
-	<!-- End Category items  -->
+<!-- End Category items  -->
 
 
 
+<!-- TOP BUTTON -->
+<div class="top" title="UP"><i class="far fa-caret-square-up"></i></div>
+<!-- END TOP BUTTON -->
 
-	
-	<!-- PAGINATION  -->
-	<div class="pagination-wrap pw-category">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 ">
-
-
-					<div class="col-xs-12 col-sm-4 col-sm-offset-4">
-						<div class="pagination-items">
-
-
-							<div class="prev-btn">
-								<a href="#"><span>Prev</span></a>
-							</div>
-
-
-
-							<div class="num-btn">
-								<ul>
-									<li><a href="#"><span>1</span></a></li>
-									<li class="active"><a href="#"><span>2</span></a></li>
-									<li><a href="#"><span>3</span></a></li>
-									<li><a href="#"><span>4</span></a></li>
-									<li><a href="#"><span>5</span></a></li> 
-
-								</ul>
-							</div>
-
-
-
-							<div class="next-btn">
-								<a href="#"><span>Next</span></a>
-							</div>
-
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- END PAGINATION  -->	
-
-	
-	
-
-	<!-- TOP BUTTON -->
-	<div class="top" title="UP"><i class="far fa-caret-square-up"></i></div>
-	<!-- END TOP BUTTON -->
-
-	<!-- FOOTER -->
-	<?php get_footer(); ?>
+<!-- FOOTER -->
+<?php get_footer(); ?>
 
 
 
@@ -166,4 +76,3 @@
 
 
 
-	

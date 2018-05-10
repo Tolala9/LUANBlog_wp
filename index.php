@@ -24,28 +24,14 @@ its index file
 
 	<?php	if (have_posts()) : 
 		while (have_posts()) : the_post(); 
-
+			 get_categories(); 
 			get_template_part('content-blog');
 
 		endwhile;
 
 	else:
 
-		?>
-		<div class="container">
-		<div class="row">
-			<div class="col-sm-12 col-xs-12">
-				<div class="col-sm-8 col-sm-offset-2 col-xs-12">
-					<div class="content-not-found-container">
-						<h1>Sorry</h1>
-						<i class="fas fa-align-left"></i>
-						<h2>Content not found</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php
+		get_template_part('content-notfound');
 
 	endif; 
 	?>
