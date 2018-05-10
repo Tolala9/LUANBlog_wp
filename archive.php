@@ -46,7 +46,7 @@ its archive file
 								} elseif (is_month()) {
 									echo 'Monthly Archives: ' . get_the_date('F Y');
 								} elseif (is_year()) {
-									echo 'Monthly Archives: ' . get_the_date('Y');
+									echo 'Year Archives: ' . get_the_date('Y');
 								} else {
 									echo 'Archives:';
 								}
@@ -59,10 +59,17 @@ its archive file
 									if (is_category()) {
 										$catID = get_the_category();
 										echo category_description( $catID[0] );  
+									} elseif (is_day()) {
+										echo ' All Posts posted on this Day';
+										} elseif (is_month()) {
+										echo ' All Posts posted on this Month';
+										} elseif (is_year()) {
+										echo ' All Posts posted on this Year';
 									} elseif (is_tag()) {
-										echo tag_description();
+									echo tag_description();
 									} if (get_the_author_meta( 'description' )):
 											the_author_meta('description');
+
 										endif;
 									
 									?></p>
