@@ -15,7 +15,7 @@
 <!-- END PAGE TITLE -->
 
 
-its index file
+
 
 
 <div class="posts-wrap ">
@@ -24,7 +24,7 @@ its index file
 
 	<?php	if (have_posts()) : 
 		while (have_posts()) : the_post(); 
-			 get_categories(); 
+
 			get_template_part('content-blog');
 
 		endwhile;

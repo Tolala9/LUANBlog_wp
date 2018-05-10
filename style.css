@@ -1284,7 +1284,7 @@ ul {
   margin-bottom: 65px; }
 
 /* ********** END ARCHIVE PAGE STLE ************* */
-/* ********** CATEGORY PAGE STLE ************* */
+/* ********** POST PAGE STLE ************* */
 .post-item-postpage {
   margin-top: 40px;
   margin-bottom: 40px; }
@@ -1323,7 +1323,7 @@ ul {
           -ms-flex-direction: column;
               flex-direction: column; }
       .post-item-postpage .post-inf-postpage .post-cat-postpage span {
-        padding: 7px 3px 0px;
+        padding: 5px 3px 0px;
         margin: auto;
         line-height: 35px;
         -webkit-box-flex: 15;
@@ -1571,6 +1571,9 @@ ul {
 
 /* ********** END POST PAGE STYLE ************* */
 /* ********** ARCHIVE WP PAGE STLE ************* */
+.posts-wrap {
+  margin-bottom: 40px; }
+
 .archive-page-block {
   margin-top: 40px;
   background-color: #FAFAFA; }
@@ -2044,7 +2047,9 @@ ul {
       font-size: 20px;
       line-height: 20px; }
     .search-page-block-action form.search-field-large button.submit .fab {
-      font-size: 18px; } }
+      font-size: 18px; }
+  .wide-row a.category-item p.cat-name {
+    font-size: 18px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 375px) {
@@ -2081,7 +2086,9 @@ ul {
     height: 80px;
     margin: 40px 5px 0px; }
   .post-item-postpage .post-inf-postpage .post-cat-postpage {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .wide-row a.category-item p.cat-name {
+    font-size: 16px; } }
 
 /*==========  Mobile First  ==========*/
 /* Custom, iPhone Retina */

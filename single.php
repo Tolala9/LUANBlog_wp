@@ -2,7 +2,7 @@
 
 get_header(); ?>
 
-Its single page
+
 
 <div class="posts-wrap">
 
@@ -46,7 +46,7 @@ Its single page
 							</div>
 
 							<div class="post-date-postpage">
-								<div class="gray-line"></div>
+								<!-- <div class="gray-line"></div> -->
 								<span class="date-wrap-postpage"><span class="day-postpage"><?php the_time('j') ?></span><span class="month-postpage">
 									<?php the_time('F Y') ?></span></span>
 								</div>
