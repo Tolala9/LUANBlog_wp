@@ -5,7 +5,7 @@ get_header();
 if (have_posts()) : ?>
 
 <!-- for searching -->
-<!-- Archive TITLE -->
+<!-- Search TITLE -->
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 col-xs-12">
@@ -36,7 +36,7 @@ if (have_posts()) : ?>
 			</div> 
 		</div> 
 	</div> 
-	<!--END Archive TITLE -->
+	<!--END Search TITLE -->
 
 <div class="posts-wrap ">
 	<!-- POST ITEM -->
@@ -52,7 +52,7 @@ if (have_posts()) : ?>
 
 else:
 
-	get_template_part('content-notfound');
+	get_template_part('content-notfound-search');
 
 endif; 
 ?>

@@ -1539,6 +1539,8 @@ ul {
         margin: 10px 20px 10px; }
       .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .hljs {
         background-color: #dee4e4; }
+      .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage > div {
+        margin: 0 20px; }
       .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .gray-line {
         display: block;
         background-color: #e7efee;
@@ -1685,6 +1687,21 @@ ul {
   .content-not-found-container .fas {
     font-size: 150px;
     color: #28B78C; }
+  .content-not-found-container-search {
+    padding-top: 40px;
+    text-align: center; }
+    .content-not-found-container-search h1 {
+      margin: 0;
+      font-size: 50px;
+      font-weight: 200;
+      letter-spacing: 8px;
+      margin-bottom: 20px; }
+    .content-not-found-container-search h2 {
+      margin: 0;
+      font-weight: 300; }
+    .content-not-found-container-search .fas {
+      font-size: 150px;
+      color: #28B78C; }
 
 /* ********** CONTENT NOT FOUND WP PAGE STLE ************* */
 /* ********** STICKY FOOTER STYLE ************* */
@@ -1851,7 +1868,10 @@ ul {
   .content-not-found-container {
     padding-top: 50px; }
     .content-not-found-container h1 {
-      font-size: 30px; } }
+      font-size: 30px; }
+  .content-not-found-container-search {
+    margin-top: 0;
+    padding-top: 0; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
@@ -2151,4 +2171,7 @@ ul {
 @media only screen and (min-width: 1400px) {
   .content-not-found-container {
     margin-top: 30px;
-    padding-top: 200px; } }
+    padding-top: 200px; }
+  .content-not-found-container-search {
+    margin-top: 30px;
+    padding-top: 130px; } }

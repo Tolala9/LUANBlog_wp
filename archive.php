@@ -1,20 +1,5 @@
 <?php get_header(); ?> 
 <!--END HEADER -->
-<!-- PAGE TITLE -->
-<div class="page-title">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-4 col-xs-offset-4">
-				<div class="title-flex">
-					<div class="blog-title">blog</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- END PAGE TITLE -->
-
-
 
 
 
