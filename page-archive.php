@@ -67,16 +67,35 @@
 					<div class="archive-item archive-item-categories">
 
 						<div class="arch-item-title"><a title="View all categories" href="<?php echo site_url('/categories/') ?>">
-							Some Categories
+							5 Top Categories
 						</a></div>
 						<div class="gray-line"></div>
 						<div class="arch-item-content">
 							<ul>
-								<li><a href="#">php</a></li>
-								<li><a href="#">Wp</a></li>
-								<li><a href="#">sublime text</a></li>
-								<li><a href="#">sass</a></li>
-								<li><a href="#">gulp</a></li>
+
+								<?php
+								$categories = get_categories( array(
+									'orderby' => 'count',
+									'order'   => 'DESC',
+									'number'   => '5',
+								) );
+
+								foreach( $categories as $category ) {
+									$category_link = sprintf( 
+										'<a href="%1$s" alt="%2$s">%3$s</a>',
+										esc_url( get_category_link( $category->term_id ) ),
+										esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
+										esc_html( $category->name )
+									);
+									?>
+
+									<li><a href="<?php echo esc_url(get_category_link( $category->term_id )); ?>" title="<?php echo $category->description ?>"><?php echo esc_html( $category->name ); ?></a></li>
+
+									<?php    
+								} 
+
+								?>
+
 							</ul>
 
 						</div>
@@ -87,12 +106,12 @@
 
 					<div class="archive-item archive-item-tags">
 						<div class="arch-item-title">
-							<a title="View all tags" href="<?php echo site_url('/tags') ?>">10 POP Tags</a>
+							<a title="View all tags" href="<?php echo site_url('/tags') ?>">10 Top Tags</a>
 						</div>
 						<div class="gray-line"></div>
 						<div class="arch-item-content">
 							<ul>
-								
+
 
 								<?php
 								$tagsArch = get_tags( array(
@@ -120,7 +139,7 @@
 
 								?>
 
-								
+
 							</ul>
 
 
@@ -180,11 +199,11 @@
 		</div>
 	</div>
 	<!-- END ARCHIVE ITEMS -->
-	
+
 
 	<!-- TOP BUTTON -->
 	<div class="top" title="UP"><i class="far fa-caret-square-up"></i></div>
 	<!-- END TOP BUTTON -->
 
-	
+
 	<?php get_footer(); ?>
