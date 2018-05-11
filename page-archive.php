@@ -61,7 +61,7 @@
 
 						<div class="archive-item archive-item-tags">
 				<div class="arch-item-title">
-					<a href="#">Tags</a>
+					<a href="<?php echo site_url('/tags') ?>">Tags</a>
 				</div>
 				<div class="gray-line"></div>
 				<div class="arch-item-content">
@@ -141,7 +141,7 @@
 </div>
 	<!-- END ARCHIVE ITEMS -->
 	
-
+ 
 <!-- TOP BUTTON -->
 <div class="top" title="UP"><i class="far fa-caret-square-up"></i></div>
 <!-- END TOP BUTTON -->

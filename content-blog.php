@@ -58,7 +58,7 @@
 
 											<div class="post-tags">
 												<div class="post-tags-icon">
-													<a href="#"><i class="fas fa-tags"></i></a>
+													<a href="<?php echo site_url('/tags') ?>"><i class="fas fa-tags"></i></a>
 												</div>
 												<div class="post-tags-content">
 													<?php the_tags('' ,'' ,''); ?>

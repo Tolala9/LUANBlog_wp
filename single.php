@@ -54,7 +54,7 @@ get_header(); ?>
 								<div class="post-tags-wrap">
 									<div class="post-tags-postpage">
 										<div class="post-tags-iconpostpage">
-											<a href="#"><i class="fas fa-tags"></i></a>
+											<a href="<?php echo site_url('/tags') ?>"><i class="fas fa-tags"></i></a>
 										</div>
 										<div class="post-tags-contentpostpage">
 											<?php the_tags('' ,'' ,''); ?>

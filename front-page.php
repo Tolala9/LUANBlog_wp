@@ -28,7 +28,7 @@
 					<a  class="folow-item" title="Facebook" href="https://www.facebook.com/profile.php?id=100004768836692" target="_blank" ><i class="fab fa-facebook-f"></i></a>
 					<a class="folow-item" title="Git" href="https://github.com/Tolala9" target="_blank"><i class="fab fa-git" ></i></a>
 					<a class="folow-item" title="Site" href="http://luancv.000webhostapp.com/" target="_blank"><i class="fab fa-internet-explorer"></i></a>
-				</div>
+				</div> 
 			</div>
 <!--End Follow section -->
 
