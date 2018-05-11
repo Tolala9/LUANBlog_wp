@@ -53,7 +53,7 @@
 										<div class="post-footer"> 
 
 											<div class="post-author">
-												<i class="far fa-user"></i><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">By <?php the_author() ?></a>
+												<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><i class="far fa-user"></i></a><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">By <?php the_author() ?></a>
 											</div>
 
 											<div class="post-tags">

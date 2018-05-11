@@ -1220,6 +1220,7 @@ ul {
     font-size: 14px; }
   .archive-item-search form.archive-search-field button.submit {
     background-color: #FAFAFA;
+    border: none;
     display: inline-block;
     border: none;
     text-decoration: none;
@@ -1668,7 +1669,8 @@ ul {
       outline: none; }
       .search-page-block-action form.search-field-large button.submit .fab {
         color: #28B78C;
-        font-size: 22px; }
+        font-size: 22px;
+        margin-top: 20pxx; }
   .search-page-block-action hr {
     margin: 0; }
 

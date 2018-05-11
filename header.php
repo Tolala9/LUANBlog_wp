@@ -94,9 +94,12 @@
 
 						<nav class="top-mnu">  
 							<ul>
-								<li><a href="blog.html">blog</a></li>
-								<li><a href="catecories.html">categories</a></li>
-								<li><a href="archive.html">archive</a></li>
+								<?php wp_nav_menu(array(
+										'theme_location' => 'mobileMenuLocation',
+										'menu' => 'main-menu',
+  									'container' => '',
+  									'items_wrap' => '%3$s' 
+									)); ?>
 							</ul>
 						</nav>
 

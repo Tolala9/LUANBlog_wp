@@ -22,7 +22,8 @@ add_action('wp_enqueue_scripts', 'university_files');
 //Menu      
 		register_nav_menus(array(
 			'headerMenuLocation' => __('Header Menu Location'),
-		  'footerMenuLocation' => __('Footer Menu Location'),
+      'footerMenuLocation' => __('Footer Menu Location'),
+		  'mobileMenuLocation' => __('Mobile Menu Location'),
 	));
 
 //Title tab
