@@ -928,11 +928,15 @@ $h: 3px
 						font-size: 14px
 						font-weight: 300
 						color: $dark_text
-						line-height: 10px
+						line-height: 14px
 						transition: ease 0.3s
+						letter-spacing: .6px
 						&:hover
 							color: $accent
 							font-weight: 400
+							letter-spacing: .8px
+				.gray-line
+					margin-top: 10px
 
 .archive-item-categories
 	.arch-item-content
@@ -950,7 +954,7 @@ $h: 3px
 			line-height: 38px
 			background-color: $white
 			// text-transform: uppercase
-			font-size: 14px
+			font-size: 16px
 		button.submit 
 			background-color: $white
 			border: none
@@ -984,6 +988,7 @@ $h: 3px
 						line-height: 14px
 						background-color: $light_block
 						transition: ease 0.3s
+						text-transform: capitalize
 						&:hover
 							color: $white
 							background-color: $accent
@@ -996,8 +1001,10 @@ $h: 3px
 				overflow: hidden;
 				li
 					float: left
-					margin-lef: 0
+					margin-left: 15px
 					padding: 0
+					&:first-child
+						margin-left: 0
 					a
 						display: block
 						width: 30px
@@ -1015,8 +1022,8 @@ $h: 3px
 							background-color: $accent
 
 /* make fotter on bottom */	
-.archive-item-featurepost
-	margin-bottom: 65px
+.archive-item-popularpost
+	margin-bottom: 40px
 /* ********** END ARCHIVE PAGE STLE ************* */
 
 

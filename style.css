@@ -1196,13 +1196,17 @@ ul {
           font-size: 14px;
           font-weight: 300;
           color: #27323a;
-          line-height: 10px;
+          line-height: 14px;
           -webkit-transition: ease 0.3s;
           -o-transition: ease 0.3s;
-          transition: ease 0.3s; }
+          transition: ease 0.3s;
+          letter-spacing: .6px; }
           .archive-item-recentpost .arch-item-content ul li a:hover, .archive-item-featurepost .arch-item-content ul li a:hover, .archive-item-categories .arch-item-content ul li a:hover, .archive-item-search .arch-item-content ul li a:hover, .archive-item-tags .arch-item-content ul li a:hover, .archive-item-popularpost .arch-item-content ul li a:hover, .archive-item-socials .arch-item-content ul li a:hover {
             color: #28B78C;
-            font-weight: 400; }
+            font-weight: 400;
+            letter-spacing: .8px; }
+      .archive-item-recentpost .arch-item-content ul .gray-line, .archive-item-featurepost .arch-item-content ul .gray-line, .archive-item-categories .arch-item-content ul .gray-line, .archive-item-search .arch-item-content ul .gray-line, .archive-item-tags .arch-item-content ul .gray-line, .archive-item-popularpost .arch-item-content ul .gray-line, .archive-item-socials .arch-item-content ul .gray-line {
+        margin-top: 10px; }
 
 .archive-item-categories .arch-item-content a {
   text-transform: uppercase; }
@@ -1217,7 +1221,7 @@ ul {
     padding: 8px;
     line-height: 38px;
     background-color: #FAFAFA;
-    font-size: 14px; }
+    font-size: 16px; }
   .archive-item-search form.archive-search-field button.submit {
     background-color: #FAFAFA;
     border: none;
@@ -1250,7 +1254,8 @@ ul {
       background-color: #dee4e4;
       -webkit-transition: ease 0.3s;
       -o-transition: ease 0.3s;
-      transition: ease 0.3s; }
+      transition: ease 0.3s;
+      text-transform: capitalize; }
       .archive-item-tags .arch-item-content ul li a:hover {
         color: #FAFAFA;
         background-color: #28B78C; }
@@ -1261,8 +1266,10 @@ ul {
   overflow: hidden; }
   .archive-item-socials .arch-item-content ul li {
     float: left;
-    margin-lef: 0;
+    margin-left: 15px;
     padding: 0; }
+    .archive-item-socials .arch-item-content ul li:first-child {
+      margin-left: 0; }
     .archive-item-socials .arch-item-content ul li a {
       display: block;
       width: 30px;
@@ -1282,8 +1289,8 @@ ul {
         background-color: #28B78C; }
 
 /* make fotter on bottom */
-.archive-item-featurepost {
-  margin-bottom: 65px; }
+.archive-item-popularpost {
+  margin-bottom: 40px; }
 
 /* ********** END ARCHIVE PAGE STLE ************* */
 /* ********** POST PAGE STLE ************* */
