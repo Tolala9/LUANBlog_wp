@@ -8,26 +8,26 @@
 
 			<div class="col-sm-4 col-sm-offset-4">
 				<div class="home-title">
-					<h2><?php echo get_bloginfo('name'); ?></h2>
+					<h2><?php echo get_theme_mod('blog-front-page-name'); ?></h2>
 					<h3><?php echo get_bloginfo('description'); ?></h3>
-					<p class="quote">"Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do."</p>
-					<p class="author-quote">- Pelé</p>
+					<p class="quote"><?php echo get_theme_mod('blog-front-page-title-quote'); ?></p>
+					<p class="author-quote"><?php echo get_theme_mod('blog-front-page-title-quote-author'); ?></p>
 				</div>
 				</div>
 
 			<div class="col-sm-8 col-sm-offset-2">
 				<div class="home-image">
-					<img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/home-img.jpg" alt="Home image">
+					<img class="img-responsive" src="<?php echo wp_get_attachment_url(get_theme_mod('blog-front-page-intro-picture'));?>" alt="Home image">
 				</div>
 			</div>
 <!-- Follow section -->
 			<div class="col-sm-8 col-sm-offset-2">
 				<div class="home-follow">
 					<div class="home-follow-box"><p>Follow me:</p></div>
-					<a class="folow-item" title="LinkedIn" href="https://www.linkedin.com/in/anatolii-lukavenko/" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
-					<a  class="folow-item" title="Facebook" href="https://www.facebook.com/profile.php?id=100004768836692" target="_blank" ><i class="fab fa-facebook-f"></i></a>
-					<a class="folow-item" title="Git" href="https://github.com/Tolala9" target="_blank"><i class="fab fa-git" ></i></a>
-					<a class="folow-item" title="Site" href="http://luancv.000webhostapp.com/" target="_blank"><i class="fab fa-internet-explorer"></i></a>
+					<a class="folow-item" title="LinkedIn" href="<?php echo get_theme_mod('blog-front-page-social-linkedin'); ?>" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
+					<a  class="folow-item" title="Facebook" href="<?php echo get_theme_mod('blog-front-page-social-facebook'); ?>" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+					<a class="folow-item" title="Git" href="<?php echo get_theme_mod('blog-front-page-social-git'); ?>" target="_blank"><i class="fab fa-git" ></i></a>
+					<a class="folow-item" title="Site" href="<?php echo get_theme_mod('blog-front-page-social-site'); ?>" target="_blank"><i class="fab fa-internet-explorer"></i></a>
 				</div> 
 			</div>
 <!--End Follow section -->
@@ -68,7 +68,7 @@
 
 
 			<div class="col-sm-8 col-sm-offset-2">
-				<div class="copyright"><p>&copy; Anatolii Lukavenko <?php echo date("Y"); ?></p></div>
+				<div class="copyright"><p>&copy; <?php echo get_theme_mod('blog-front-page-author-site'); ?> <?php echo date("Y"); ?></p></div>
 			</div>
 
 
