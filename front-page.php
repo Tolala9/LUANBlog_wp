@@ -80,10 +80,6 @@
 	</div>
 	</div>
 
-<!-- TOP BUTTON -->
-<div class="top" title="UP"><i class="far fa-caret-square-up"></i></div>
-<!-- END TOP BUTTON -->	
-
 <!-- Footer -->
 <?php get_footer(); ?>
 	

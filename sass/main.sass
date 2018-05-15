@@ -434,14 +434,6 @@ ul
 					&-content
 						flex: 24
 						margin-top: 2px
-						// ul
-						// 	list-style-type: none
-						// 	margin: 0px 3px
-						// 	overflow: hidden;
-						// 	li
-						// 		float: left
-						// 		margin-left: 0
-						// 		padding: 0
 						a
 							display: inline-block
 							margin: 2px 4px 0
@@ -467,11 +459,6 @@ ul
 							color: $accent
 							cursor: pointer
 
-
-
-
-
-			
 /* END POST ITEM */			
 
 
@@ -480,69 +467,37 @@ ul
 .pagination-wrap
 	margin: 40px 40px
 	.pagination-items
-		display: flex
-		justify-content: space-betwen
-		
-		.num-btn
-			flex: 2
-			display: flex
-			ul
-				list-style-type: none
-				padding: 0
-				margin: 0
-				flex: 1
-				display: flex
-				justify-content: space-between
-				li
-					flex: 1
-					display: flex
-					a
-						display: flex
-						margin: auto
-						text-transform: uppercase
-						color: $white
-						font-size: 15px
-						font-weight: 300
-						background-color: $light_text
-						width: 70%
-						transition: ease 0.5s
-						&:hover, &:focus
-							text-decoration: none
-							color: $dark_text
-							background-color: $white
-						&:active 
-							color: $dark_text
-							background-color: $white
-					span
-						margin: auto
-					&.active
-						a
-							color: $dark_text
-							background-color: $white
-							font-weight: 400
-							transition: ease 0.5s
-							&:hover, &:focus
-								color: $dark_text
-								background-color: $white
-								font-weight: 400
+		display: block
+		margin: auto
+		width: 100%
+		a
+			text-align: center
 
-		.next-btn, .prev-btn
-			flex: 1
-			display: flex
-			a
-				display: flex
-				margin: auto
-				background-color: $light_text
-				color: $white
-				width: 70%
-				transition: ease 0.5s
-				&:hover, &:focus
-					text-decoration: none
-					color: $dark_text
-					background-color: $white
-				span
-					text-transform: uppercase
-					margin: auto
+		.page-numbers
+			width: 7%
+			display: inline-block
+			padding: 5px 5px
+			margin-left: 5px
+			color: $white
+			font-size: 15px
+			font-weight: 300
+			background-color: $light_text
+			line-height: 25px
+			transition: ease 0.5s 
+
+			&:hover, &:focus
+				text-decoration: none
+				color: $dark_text
+				background-color: $white
+
+			&.current 
+				color: $dark_text
+				background-color: $white
+				text-align: center
+
+		.prev, .next
+			width: 14%
+			
 /* END PAGINATION */
 
 

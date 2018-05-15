@@ -100,15 +100,12 @@ get_header(); ?>
 
 else:
 
-	echo '<p>No content found</p>';
+	get_template_part('content-notfound');
 
 endif; 
 ?>
 </div>
 
-<!-- TOP BUTTON -->
-<div class="top" title="UP"><i class="far fa-caret-square-up"></i></div>
-<!-- END TOP BUTTON -->
 
 <?php get_footer();
 

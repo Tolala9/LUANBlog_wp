@@ -610,111 +610,34 @@ ul {
 .pagination-wrap {
   margin: 40px 40px; }
   .pagination-wrap .pagination-items {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-betwen;
-    -webkit-justify-content: space-betwen;
-        -ms-flex-pack: space-betwen;
-            justify-content: space-betwen; }
-    .pagination-wrap .pagination-items .num-btn {
-      -webkit-box-flex: 2;
-      -webkit-flex: 2;
-          -ms-flex: 2;
-              flex: 2;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; }
-      .pagination-wrap .pagination-items .num-btn ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-                justify-content: space-between; }
-        .pagination-wrap .pagination-items .num-btn ul li {
-          -webkit-box-flex: 1;
-          -webkit-flex: 1;
-              -ms-flex: 1;
-                  flex: 1;
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex; }
-          .pagination-wrap .pagination-items .num-btn ul li a {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            margin: auto;
-            text-transform: uppercase;
-            color: #FAFAFA;
-            font-size: 15px;
-            font-weight: 300;
-            background-color: #8a959b;
-            width: 70%;
-            -webkit-transition: ease 0.5s;
-            -o-transition: ease 0.5s;
-            transition: ease 0.5s; }
-            .pagination-wrap .pagination-items .num-btn ul li a:hover, .pagination-wrap .pagination-items .num-btn ul li a:focus {
-              text-decoration: none;
-              color: #27323a;
-              background-color: #FAFAFA; }
-            .pagination-wrap .pagination-items .num-btn ul li a:active {
-              color: #27323a;
-              background-color: #FAFAFA; }
-          .pagination-wrap .pagination-items .num-btn ul li span {
-            margin: auto; }
-          .pagination-wrap .pagination-items .num-btn ul li.active a {
-            color: #27323a;
-            background-color: #FAFAFA;
-            font-weight: 400;
-            -webkit-transition: ease 0.5s;
-            -o-transition: ease 0.5s;
-            transition: ease 0.5s; }
-            .pagination-wrap .pagination-items .num-btn ul li.active a:hover, .pagination-wrap .pagination-items .num-btn ul li.active a:focus {
-              color: #27323a;
-              background-color: #FAFAFA;
-              font-weight: 400; }
-    .pagination-wrap .pagination-items .next-btn, .pagination-wrap .pagination-items .prev-btn {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; }
-      .pagination-wrap .pagination-items .next-btn a, .pagination-wrap .pagination-items .prev-btn a {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        margin: auto;
-        background-color: #8a959b;
-        color: #FAFAFA;
-        width: 70%;
-        -webkit-transition: ease 0.5s;
-        -o-transition: ease 0.5s;
-        transition: ease 0.5s; }
-        .pagination-wrap .pagination-items .next-btn a:hover, .pagination-wrap .pagination-items .next-btn a:focus, .pagination-wrap .pagination-items .prev-btn a:hover, .pagination-wrap .pagination-items .prev-btn a:focus {
-          text-decoration: none;
-          color: #27323a;
-          background-color: #FAFAFA; }
-        .pagination-wrap .pagination-items .next-btn a span, .pagination-wrap .pagination-items .prev-btn a span {
-          text-transform: uppercase;
-          margin: auto; }
+    display: block;
+    margin: auto;
+    width: 100%; }
+    .pagination-wrap .pagination-items a {
+      text-align: center; }
+    .pagination-wrap .pagination-items .page-numbers {
+      width: 7%;
+      display: inline-block;
+      padding: 5px 5px;
+      margin-left: 5px;
+      color: #FAFAFA;
+      font-size: 15px;
+      font-weight: 300;
+      background-color: #8a959b;
+      line-height: 25px;
+      -webkit-transition: ease 0.5s;
+      -o-transition: ease 0.5s;
+      transition: ease 0.5s; }
+      .pagination-wrap .pagination-items .page-numbers:hover, .pagination-wrap .pagination-items .page-numbers:focus {
+        text-decoration: none;
+        color: #27323a;
+        background-color: #FAFAFA; }
+      .pagination-wrap .pagination-items .page-numbers.current {
+        color: #27323a;
+        background-color: #FAFAFA;
+        text-align: center; }
+    .pagination-wrap .pagination-items .prev, .pagination-wrap .pagination-items .next {
+      width: 14%; }
 
 /* END PAGINATION */
 /* TOGGLE BUTTON */
@@ -1828,7 +1751,14 @@ ul {
     .archive-item-search form.archive-search-field input[type=text] {
       width: 75%; }
   .archive-item-socials .arch-item-content ul li a {
-    margin: 7px; } }
+    margin: 7px; }
+  .pagination-wrap .pagination-items .page-numbers {
+    width: 7%;
+    font-size: 15px;
+    line-height: 25px;
+    margin-left: 3px; }
+  .pagination-wrap .pagination-items .prev, .pagination-wrap .pagination-items .next {
+    width: 14%; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -1845,10 +1775,15 @@ ul {
     font-size: 14px; }
   .post-item .post-inf .post-cat {
     font-size: 20px; }
-  .pagination-wrap .pagination-items .num-btn ul li a {
-    font-size: 14px; }
-  .pagination-wrap .pagination-items .next-btn, .pagination-wrap .pagination-items .prev-btn {
-    font-size: 14px; }
+  .pagination-wrap {
+    margin: 40px 20px; }
+    .pagination-wrap .pagination-items .page-numbers {
+      width: 7%;
+      font-size: 14px;
+      line-height: 18px;
+      margin-left: 1px; }
+    .pagination-wrap .pagination-items .prev, .pagination-wrap .pagination-items .next {
+      width: 17%; }
   .home-follow a.folow-item {
     -webkit-flex-basis: 13%;
         -ms-flex-preferred-size: 13%;
@@ -1908,8 +1843,13 @@ ul {
     width: 5%; }
     .header-line form.search-field button.submit .fab {
       font-size: 16px; }
-  .pagination-wrap .pagination-items .num-btn ul li a {
-    width: 50%; }
+  .pagination-wrap .pagination-items .page-numbers {
+    width: 7%;
+    font-size: 15px;
+    line-height: 25px;
+    margin-left: 3px; }
+  .pagination-wrap .pagination-items .prev, .pagination-wrap .pagination-items .next {
+    width: 14%; }
   .top {
     width: 40px;
     height: 40px;
@@ -2036,8 +1976,13 @@ ul {
           -webkit-flex: 3;
               -ms-flex: 3;
                   flex: 3; }
-  .pagination-wrap .pagination-items .num-btn ul li a {
-    width: 50%; }
+  .pagination-wrap .pagination-items .page-numbers {
+    width: 7%;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 3px; }
+  .pagination-wrap .pagination-items .prev, .pagination-wrap .pagination-items .next {
+    width: 14%; }
   .pagination-wrap .post-text-wrap {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2159,7 +2104,7 @@ ul {
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 375px) {
   .toggle-mnu {
-    right: 20px;
+    right: 30px;
     top: 0px; }
   .post-item .post-inf .post-date .date-wrap .day {
     -webkit-box-flex: 1;
@@ -2171,12 +2116,15 @@ ul {
     -webkit-flex: 6;
         -ms-flex: 6;
             flex: 6; }
-  .pagination-wrap .pagination-items .num-btn ul li a {
-    width: 70%;
-    font-size: 12px; }
-  .pagination-wrap .pagination-items .next-btn, .pagination-wrap .pagination-items .prev-btn {
-    width: 100%;
-    font-size: 12px; }
+  .pagination-wrap {
+    margin: 40px 20px; }
+    .pagination-wrap .pagination-items .page-numbers {
+      width: 7%;
+      font-size: 13px;
+      line-height: 15px;
+      margin-left: 1px; }
+    .pagination-wrap .pagination-items .prev, .pagination-wrap .pagination-items .next {
+      width: 18%; }
   .wide-row a.category-item {
     width: 22%;
     height: 80px;

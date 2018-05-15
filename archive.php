@@ -76,6 +76,8 @@
 
 				endwhile;
 
+				get_template_part('content-pagination');
+
 			else:
 
 				get_template_part('content-notfound');
@@ -84,16 +86,6 @@
 			?>
 		</div>
 
-
-
-
-
-
-		
-
-		<!-- TOP BUTTON -->
-		<div class="top" title="UP"><i class="far fa-caret-square-up"></i></div>
-		<!-- END TOP BUTTON --> 
 
 		<!-- Footer -->
 
