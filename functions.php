@@ -7,7 +7,7 @@ function university_files()
   {
     
     wp_enqueue_style('university_main_styles', get_stylesheet_uri(), NULL, microtime());
-    wp_enqueue_script('main-university-js', get_theme_file_uri('js/scripts.min.js'), NULL, microtime(), true);
+    wp_enqueue_script('main-university-js', get_theme_file_uri('js/scripts-bundled.js'), NULL, microtime(), true);
     wp_enqueue_script('highlight-js', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js');
     wp_enqueue_style('highlight-css', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css');
 
@@ -68,7 +68,9 @@ remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'new_wp_trim_excerpt');
 
 
-//Add info from front-page to admin appearance customize screen
+
+
+/*======Add info from front-page to admin appearance customize screen=========*/
 function blog_front_page($wp_customize)
 {
  $wp_customize->add_section('blog-front-page-info', array(
@@ -188,7 +190,7 @@ $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'blog-front-
 }
 add_action('customize_register', 'blog_front_page');
 
-// END Add info from front-page to admin appearance customize screen
+/*============END Add info from front-page to admin appearance customize screen===========*/
 
 
 
