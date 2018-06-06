@@ -1,14 +1,20 @@
 {
-  "name": "optimizedhtml",
-  "version": "2.0.1",
-  "description": "OptimizedHTML - Start HTML Template",
+  "name": "LuAnBlog",
+  "version": "2.0.0",
+  "description": "Start template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "webpack",
+    "gulpwatch": "gulp watch",
+    "gulpstyles": "gulp styles",
+    "gulpscripts": "gulp scripts"
   },
-  "author": "WebDesign Master",
+  "author": "LuAn",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "7.0.0-beta.34",
+    "@babel/preset-env": "7.0.0-beta.34",
+    "babel-loader": "8.0.0-beta.0",
     "browser-sync": "^2.23.6",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -25,6 +31,9 @@
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
-    "npm": "^5.8.0"
+    "jquery": "^3.3.1",
+    "npm": "^5.8.0",
+    "webpack": "^3.8.1",
+    "webpack-cli": "^3.0.2"
   }
 }

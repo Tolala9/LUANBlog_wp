@@ -1,5 +1,6 @@
 var gulp           = require('gulp'), 
-		settings = require('./settings'),
+		settings       = require('./settings'),
+		webpack        = require('webpack'),
 		gutil          = require('gulp-util' ),
 		sass           = require('gulp-sass'),
 		browserSync    = require('browser-sync'),
@@ -15,40 +16,20 @@ var gulp           = require('gulp'),
 		notify         = require("gulp-notify");
 
 // Project Scripts
+gulp.task('scripts', function(callback) {
+  webpack(require('./webpack.config.js'), function(err, stats) {
+    if (err) {
+      console.log(err.toString());
+    }
 
-gulp.task('common-js', function() {
-	return gulp.src([
-		settings.themeLocation + 'js/common.js',
-		])
-	.pipe(concat('common.min.js'))
-	// .pipe(uglify())
-	.pipe(gulp.dest(settings.themeLocation + 'js/')); //or without slash
-});
-
-gulp.task('js', ['common-js'], function() {
-	return gulp.src([
-		settings.themeLocation + 'libs/jquery/dist/jquery.min.js',
-		settings.themeLocation + 'libs/animate/animate-css.js',
-		settings.themeLocation + 'js/common.min.js', // Always at the end
-		])  
-	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Minimyze oll js (on yout choice)
-	.pipe(gulp.dest(settings.themeLocation + 'js/'))
-	.pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task('browser-sync', function() {
-	browserSync.init({
-		notify: false,
-		proxy: settings.urlToPreview,
-		ghostMode: false
-		// tunnel: true,
-		// tunnel: "myblog", //Demonstration page: http://projectmane.localtunnel.me
-	});
+    console.log(stats.toString());
+    callback();
+  });
 
 });
 
-gulp.task('sass', function() {
+// Project Styles
+gulp.task('styles', function() {
 	return gulp.src(settings.themeLocation + 'sass/**/*.sass')
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
 	.pipe(rename("style.css"))
@@ -57,13 +38,32 @@ gulp.task('sass', function() {
 	.pipe(gulp.dest(settings.themeLocation))
 	.pipe(browserSync.reload({stream: true}));
 });
+// Watch
+gulp.task('watch', function() {
+  browserSync.init({
+    notify: false,
+    proxy: settings.urlToPreview,
+    ghostMode: false
+  });
 
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
-	gulp.watch(settings.themeLocation + 'sass/**/*.sass', ['sass']);
-	gulp.watch([settings.themeLocation + 'libs/**/*.js', settings.themeLocation + 'js/common.js'], ['js']);
-	gulp.watch(settings.themeLocation + '*.php', browserSync.reload);
+  gulp.watch(settings.themeLocation + './**/*.php', function() {
+    browserSync.reload();
+  });
+  gulp.watch(settings.themeLocation + 'sass/**/*.sass', ['waitForStyles']);
+  gulp.watch([settings.themeLocation + 'js/modules/*.js', settings.themeLocation + 'js/scripts.js'], ['waitForScripts']);
+});
+
+gulp.task('waitForStyles', ['styles'], function() {
+  return gulp.src(settings.themeLocation + 'style.css')
+    .pipe(browserSync.stream());
+});
+
+gulp.task('waitForScripts', ['scripts'], function() {
+  browserSync.reload();
 });
 
 
+
+gulp.task('clearcache', function () { return cache.clearAll(); });
 
 gulp.task('default', ['watch']);
