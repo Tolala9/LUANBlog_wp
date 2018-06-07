@@ -126,6 +126,23 @@ $('pre code').each(function(i, block) {
 	hljs.highlightBlock(block);
 });
 
+/* USER FIELD */
+		$(".user-icon").click(function(){
+
+			if ($(".user-box").is(":visible")) {
+				$(".user-box").fadeOut(600);
+				
+				// $(".user-box").addClass("hidden");
+
+
+			} else {
+				$(".user-box").fadeIn(600).css("display", "flex");
+				$(".user-box").removeClass("hidden");
+
+			};
+		}); 
+		/* END USER FIELD */
+
 
 
 }

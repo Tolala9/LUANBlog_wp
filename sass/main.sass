@@ -191,10 +191,54 @@ ul
 
 /* HEADER */
 .header-line
+	// position: relative
 	width: 100%
 	height: 40px
 	background-color: $dark_block
-
+	a.user-icon
+		display: block
+		position: absolute
+		left: 40px
+		width: 40px
+		height: 40px
+		background-color: $white
+		font-size: 22px
+		line-height: 40px
+		color: $accent
+		text-align: center
+		z-index: 10
+	.user-box
+		display: flex
+		// display: none
+		flex-direction: column
+		justify-content: space-around
+		position: absolute
+		width: 100px
+		height: 61px
+		background-color: $white
+		top: 40px
+		left: 40px
+		
+		a
+			display: flex
+			flex: 1
+			font-size: 16px
+			text-transform: uppercase
+			font-weight: 300
+			line-height: 25px
+			transition: ease 0.4s
+			z-index: 10
+			color: $dark_text
+			&:hover
+				background-color: $accent
+				color: $white
+			p
+				margin: auto
+		.gray-line
+			height: 1px
+			background-color: #e7efee
+			width: 100%
+	
 	.logo
 		display: block
 		width: 40px

@@ -246,6 +246,64 @@ ul {
   width: 100%;
   height: 40px;
   background-color: #253743; }
+  .header-line a.user-icon {
+    display: block;
+    position: absolute;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #FAFAFA;
+    font-size: 22px;
+    line-height: 40px;
+    color: #28B78C;
+    text-align: center;
+    z-index: 10; }
+  .header-line .user-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    position: absolute;
+    width: 100px;
+    height: 61px;
+    background-color: #FAFAFA;
+    top: 40px;
+    left: 40px; }
+    .header-line .user-box a {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 300;
+      line-height: 25px;
+      -webkit-transition: ease 0.4s;
+      -o-transition: ease 0.4s;
+      transition: ease 0.4s;
+      z-index: 10;
+      color: #27323a; }
+      .header-line .user-box a:hover {
+        background-color: #28B78C;
+        color: #FAFAFA; }
+      .header-line .user-box a p {
+        margin: auto; }
+    .header-line .user-box .gray-line {
+      height: 1px;
+      background-color: #e7efee;
+      width: 100%; }
   .header-line .logo {
     display: block;
     width: 40px;
@@ -1959,6 +2017,10 @@ body.login, .login-action-login, .wp-core-ui, .locale-en-us {
 @media only screen and (max-width: 480px) {
   .header-line .menu-line {
     display: none; }
+  .header-line a.user-icon {
+    left: 20px; }
+  .header-line .user-box {
+    left: 20px; }
   .header-line form.search-field input[type=text] {
     display: inline-block;
     width: 80%;
@@ -2160,6 +2222,11 @@ body.login, .login-action-login, .wp-core-ui, .locale-en-us {
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 375px) {
+  .header-line a.user-icon {
+    left: 10px; }
+  .header-line .user-box {
+    left: 10px;
+    width: 80px; }
   .toggle-mnu {
     right: 30px;
     top: 0px; }

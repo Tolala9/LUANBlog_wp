@@ -10448,7 +10448,6 @@ var _Common = _interopRequireDefault(__webpack_require__(2));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // 3rd party packages from NPM
-// import animateCss from 'animate'; 
 // Our modules / classes
 // Instantiate a new object using our modules/classes
 var common = new _Common.default(); // alert("hello");
@@ -10475,7 +10474,6 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-// import animateCss from 'animate'; 
 var Common =
 /*#__PURE__*/
 function () {
@@ -10606,6 +10604,19 @@ function () {
       (0, _jquery.default)('pre code').each(function (i, block) {
         hljs.highlightBlock(block);
       });
+      /* USER FIELD */
+
+      (0, _jquery.default)(".user-icon").click(function () {
+        if ((0, _jquery.default)(".user-box").is(":visible")) {
+          (0, _jquery.default)(".user-box").fadeOut(600); // $(".user-box").addClass("hidden");
+        } else {
+          (0, _jquery.default)(".user-box").fadeIn(600).css("display", "flex");
+          (0, _jquery.default)(".user-box").removeClass("hidden");
+        }
+
+        ;
+      });
+      /* END USER FIELD */
     }
   }]);
 

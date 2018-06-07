@@ -32,80 +32,89 @@
 
 	<!-- CSS Styles -->
 	
-   <?php wp_head(); ?> 
+	<?php wp_head(); ?> 
 
 </head>
 
 <body <?php body_class(); ?>>
 	<div class="content">
-<!-- PRELOADER -->
-<div class="lds-css ng-scope">
-<div style="width:100%;height:100%" class="lds-wedges">
-<div><div><div></div></div><div><div></div>
-</div><div><div></div></div><div><div></div>
-</div></div></div></div>
- <!-- END PRELOADER -->
+		<!-- PRELOADER -->
+		<div class="lds-css ng-scope">
+			<div style="width:100%;height:100%" class="lds-wedges">
+				<div><div><div></div></div><div><div></div>
+			</div><div><div></div></div><div><div></div>
+		</div></div></div></div>
+		<!-- END PRELOADER -->
 
-	<!-- HEADER -->
-	<header>
-		<div class="header-line">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-xs-12">
-						
-						<div class="col-xs-1 col-sm-1 col-sm-offset-2 col-xs-offset-2"> 
-							<div class="logo" title="Home"><a class="no-copy" href="<?php echo site_url('/') ?>">L<sup>b</sup></a></div>
+		<!-- HEADER -->
+		<header>
+			<div class="header-line">
+				<a class="user-icon" title="User" href="#">
+					<i class="far fa-user"></i>
+				</a>
+				<div class="user-box hidden">
+					<a class="login-button" href="<?php echo wp_login_url(); ?>"><p>login</p></a>
+					<div class="gray-line"></div>
+					<a class="signup-buatton" href="<?php echo wp_registration_url(); ?>"><p>sign up</p></a>
+				</div>
 
-						</div>
-						
-						<div class="col-xs-6  col-sm-4 col-sm-offset-1">
-							<nav class="menu-line">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-xs-12">
+
+							<div class="col-xs-1 col-sm-1 col-sm-offset-2 col-xs-offset-2"> 
+								<div class="logo" title="Home"><a class="no-copy" href="<?php echo site_url('/') ?>">L<sup>b</sup></a></div>
+
+							</div>
+
+							<div class="col-xs-6  col-sm-4 col-sm-offset-1">
+								<nav class="menu-line">
+									<ul>
+
+										<?php wp_nav_menu(array(
+											'theme_location' => 'headerMenuLocation',
+											'menu' => 'main-menu',
+											'container' => '',
+											'items_wrap' => '%3$s' 
+										)); ?>
+
+									</ul>
+								</nav> 
+							</div>
+
+							<div class="col-xs-1  col-sm-1 col-sm-offset-1 ">
+								<div class="search-box" title="Search"><a class="no-copy" href="#">S<sup>h</sup></a></div>
+
+							</div>
+
+
+							<div class="col-xs-6 col-xs-offset-3  col-sm-2 col-sm-offset-0">
+								<?php get_search_form(); ?>
+							</div>
+
+
+							<button class="toggle-mnu">
+								<span class="sandwich"> 
+									<span class="sw-topper"></span>
+									<span class="sw-bottom"></span>
+									<span class="sw-footer"></span>
+								</span>
+							</button>
+
+							<nav class="top-mnu">  
 								<ul>
-
 									<?php wp_nav_menu(array(
-										'theme_location' => 'headerMenuLocation',
-										'menu' => 'main-menu',
-  									'container' => '',
-  									'items_wrap' => '%3$s' 
-									)); ?>
-
-								</ul>
-							</nav> 
-						</div>
-
-						<div class="col-xs-1  col-sm-1 col-sm-offset-1 ">
-							<div class="search-box" title="Search"><a class="no-copy" href="#">S<sup>h</sup></a></div>
-
-						</div>
-						 
-						
-						<div class="col-xs-6 col-xs-offset-3  col-sm-2 col-sm-offset-0">
-							<?php get_search_form(); ?>
-						</div>
-						
-
-						<button class="toggle-mnu">
-							<span class="sandwich"> 
-								<span class="sw-topper"></span>
-								<span class="sw-bottom"></span>
-								<span class="sw-footer"></span>
-							</span>
-						</button>
-
-						<nav class="top-mnu">  
-							<ul>
-								<?php wp_nav_menu(array(
 										'theme_location' => 'mobileMenuLocation',
 										'menu' => 'main-menu',
-  									'container' => '',
-  									'items_wrap' => '%3$s' 
+										'container' => '',
+										'items_wrap' => '%3$s' 
 									)); ?>
-							</ul>
-						</nav>
+								</ul>
+							</nav>
 
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
+		</header>
 	<!--END HEADER -->
