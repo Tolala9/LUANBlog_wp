@@ -253,11 +253,14 @@ ul {
     width: 40px;
     height: 40px;
     background-color: #FAFAFA;
-    font-size: 22px;
-    line-height: 40px;
+    font-size: 12px;
     color: #28B78C;
     text-align: center;
     z-index: 10; }
+    .header-line a.user-icon i {
+      line-height: 40px; }
+    .header-line a.user-icon img {
+      line-height: none; }
   .header-line .user-box {
     display: -webkit-box;
     display: -webkit-flex;

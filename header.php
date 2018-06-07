@@ -49,14 +49,38 @@
 		<!-- HEADER -->
 		<header>
 			<div class="header-line">
-				<a class="user-icon" title="User" href="#">
-					<i class="far fa-user"></i>
-				</a>
-				<div class="user-box hidden">
-					<a class="login-button" href="<?php echo wp_login_url(); ?>"><p>login</p></a>
-					<div class="gray-line"></div>
-					<a class="signup-buatton" href="<?php echo wp_registration_url(); ?>"><p>sign up</p></a>
-				</div>
+
+				<?php if (is_user_logged_in()) { ?>
+
+					<?php $current_user = wp_get_current_user();  ?>
+
+					<a class="user-icon" title="<?php echo $current_user->display_name ?>" href="#">
+						<?php echo get_avatar(get_current_user_id(), 40); ?>
+					</a>
+
+					<div class="user-box hidden">
+
+						<a class="signup-button" href="<?php echo wp_logout_url(); ?>"><p>Log Out</p></a>
+					</div>
+
+				<?php }  
+				else{ ?>
+
+
+					<a class="user-icon" title="User" href="#">
+						<i class="far fa-user"></i>
+					</a>
+					<div class="user-box hidden">
+						<a class="login-button" href="<?php echo wp_login_url(); ?>"><p>log in</p></a>
+						<div class="gray-line"></div>
+						<a class="signup-button" href="<?php echo wp_registration_url(); ?>"><p>sign up</p></a>
+					</div>
+
+				<?php } ?>
+
+
+
+
 
 				<div class="container">
 					<div class="row">
