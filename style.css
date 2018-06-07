@@ -1723,6 +1723,63 @@ ul {
       background-color: #28B78C; }
 
 /* ********** END CATEGORY PAGE STLE ************* */
+/* ********** LOGIN PAGE STYLE ************* */
+body.login, .login-action-login, .wp-core-ui, .locale-en-us {
+  background-color: #e7efee;
+  font-family: "dosis-ex", sans-serif; }
+
+.login h1 a {
+  color: #28B78C;
+  font-size: 30px;
+  font-weight: 400;
+  background-image: none;
+  width: auto;
+  height: auto;
+  text-indent: 0; }
+  .login h1 a:hover {
+    color: #28B78C; }
+
+.login #login_error {
+  border-left-color: #28B78C; }
+
+.login form#loginform {
+  background-color: #dee4e4; }
+  .login form#loginform p label input#user_login:focus, .login form#loginform p label input#user_pass:focus {
+    -webkit-box-shadow: 0 0 2px rgba(40, 183, 140, 0.8);
+            box-shadow: 0 0 2px rgba(40, 183, 140, 0.8);
+    border-color: #28B78C; }
+  .login form#loginform p.submit input#wp-submit {
+    background-color: #28B78C;
+    border-color: #28B78C;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .login form#loginform p.forgetmenot input[type=checkbox]:checked:before {
+    color: #28B78C; }
+  .login form#loginform p.forgetmenot input[type=checkbox]:focus {
+    -webkit-box-shadow: 0 0 2px rgba(40, 183, 140, 0.8);
+            box-shadow: 0 0 2px rgba(40, 183, 140, 0.8);
+    border-color: #28B78C; }
+
+.login p#nav a:hover, .login p#backtoblog a:hover {
+  color: #28B78C; }
+
+#login p {
+  border-left-color: #28B78C; }
+
+#login p.submit input#wp-submit {
+  background-color: #28B78C;
+  border-color: #28B78C;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+#login p label input#user_login:focus {
+  -webkit-box-shadow: 0 0 2px rgba(40, 183, 140, 0.8);
+          box-shadow: 0 0 2px rgba(40, 183, 140, 0.8);
+  border-color: #28B78C; }
+
+/* ********** END LOGIN PAGE STYLE ************* */
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {

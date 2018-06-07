@@ -1438,7 +1438,70 @@ $h: 3px
 	// 		background-color: $accent
 /* ********** END CATEGORY PAGE STLE ************* */
 
+/* ********** LOGIN PAGE STYLE ************* */
+body.login, .login-action-login, .wp-core-ui,  .locale-en-us
+	background-color: $bg
+	font-family: $default-font
+.login
+	h1
+		a
+			color: $accent
+			font-size: 30px
+			font-weight: 400
+			background-image: none
+			width: auto
+			height: auto
+			text-indent: 0
+			&:hover
+				color: $accent
+	#login_error
+		border-left-color: $accent
 
+	form#loginform
+		background-color: $light_block
+		p
+			label
+				input#user_login, input#user_pass
+					&:focus
+						box-shadow: 0 0 2px rgba(40, 183, 140, .8)
+						border-color: $accent 
+
+
+		p.submit
+			input#wp-submit
+				background-color: $accent
+				border-color: $accent
+				text-shadow: none
+				box-shadow: none
+		p.forgetmenot
+			input[type=checkbox]
+				&:checked
+					&:before
+						color: $accent
+				&:focus
+					box-shadow: 0 0 2px rgba(40, 183, 140, .8)
+					border-color: $accent 
+	p#nav, p#backtoblog
+		a
+			&:hover
+				color: $accent
+#login
+	p
+		border-left-color: $accent
+	p.submit
+		input#wp-submit
+			background-color: $accent
+			border-color: $accent
+			text-shadow: none
+			box-shadow: none
+	p
+		label
+			input#user_login
+				&:focus
+					box-shadow: 0 0 2px rgba(40, 183, 140, .8)
+					border-color: $accent 
+
+/* ********** END LOGIN PAGE STYLE ************* */
 
 
 

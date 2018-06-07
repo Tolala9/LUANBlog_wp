@@ -3,16 +3,16 @@
 show_admin_bar(false);
 
 // Styles & Scripts linking
-function university_files()
+function blog_files()
   {
     
-    wp_enqueue_style('university_main_styles', get_stylesheet_uri(), NULL, microtime());
-    wp_enqueue_script('main-university-js', get_theme_file_uri('js/scripts-bundled.js'), NULL, microtime(), true);
+    wp_enqueue_style('blog_main_styles', get_stylesheet_uri(), NULL, microtime());
+    wp_enqueue_script('main-blog-js', get_theme_file_uri('js/scripts-bundled.js'), NULL, microtime(), true);
     wp_enqueue_script('highlight-js', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js');
     wp_enqueue_style('highlight-css', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css');
 
   }
-add_action('wp_enqueue_scripts', 'university_files');
+add_action('wp_enqueue_scripts', 'blog_files');
 
 
 //Support Features 
@@ -192,11 +192,26 @@ add_action('customize_register', 'blog_front_page');
 
 /*============END Add info from front-page to admin appearance customize screen===========*/
 
+// Customize login screen
+add_action('login_enqueue_scripts', 'ourLoginCSS');
+
+function ourLoginCSS() {
+  wp_enqueue_style('blog_main_styles', get_stylesheet_uri());
+  
+}
 
 
+ add_filter('login_headertitle', 'ourLoginTitle');
 
+function ourLoginTitle() {
+  return get_bloginfo('name');
+}
 
+add_filter('login_headerurl', 'ourHeaderUrl');
 
+function ourHeaderUrl() {
+  return esc_url(site_url('/'));
+}
 
 
 
