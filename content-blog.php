@@ -67,10 +67,47 @@
 											
 											<div class="post-action">
 												<i class="far fa-share-square"></i>
-												<span class="star-box" data-exists="yes">
+
+												<?php 
+													$likeCount =new Wp_Query(array(
+														'post_type' => 'like',
+														'meta_query' => array(
+															array(
+																'key' => 'liked_post_id',
+																'compare' => '=',
+																'value' => get_the_ID()
+
+															)
+														)
+													));
+
+													$existStatus = 'no';
+
+													$existQuery =new Wp_Query(array(
+														'author' => get_current_user_id(),
+														'post_type' => 'like',
+														'meta_query' => array(
+															array(
+																'key' => 'liked_post_id',
+																'compare' => '=',
+																'value' => get_the_ID()
+
+															)
+														)
+													));
+
+													if ($existQuery->found_posts) {
+														$existStatus = 'yes';
+													}
+
+												 ?>
+
+												<span class="star-box" data-exist="<?php  echo $existStatus;?>">
 													<i class="far fa-star"></i>
 													<i class="fas fa-star"></i>
-													<span class="star-count">10</span>
+													<span class="star-count"><?php echo $likeCount->found_posts; ?></span>
+
+
 												</span>
 											</div>
 										</div>

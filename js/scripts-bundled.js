@@ -10445,12 +10445,15 @@ var _jquery = _interopRequireDefault(__webpack_require__(0));
 
 var _Common = _interopRequireDefault(__webpack_require__(2));
 
+var _Like = _interopRequireDefault(__webpack_require__(3));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // 3rd party packages from NPM
 // Our modules / classes
 // Instantiate a new object using our modules/classes
-var common = new _Common.default(); // alert("hello");
+var common = new _Common.default();
+var like = new _Like.default();
 
 /***/ }),
 /* 2 */
@@ -10624,6 +10627,90 @@ function () {
 }();
 
 var _default = Common;
+exports.default = _default;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _jquery = _interopRequireDefault(__webpack_require__(0));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Like =
+/*#__PURE__*/
+function () {
+  function Like() {
+    _classCallCheck(this, Like);
+
+    this.events();
+  }
+
+  _createClass(Like, [{
+    key: "events",
+    value: function events() {
+      (0, _jquery.default)(".star-box").on("click", this.ourClickDispatcher.bind(this));
+    } // Methods
+
+  }, {
+    key: "ourClickDispatcher",
+    value: function ourClickDispatcher(e) {
+      var currentStarBox = (0, _jquery.default)(e.target).closest(".star-box");
+
+      if (currentStarBox.data('exist') == 'yes') {
+        this.deleteLike();
+      } else {
+        this.createLike();
+      }
+    }
+  }, {
+    key: "createLike",
+    value: function createLike() {
+      _jquery.default.ajax({
+        url: blogData.root_url + '/wp-json/blog/v1/manageLike',
+        tupe: 'POST',
+        success: function success(responce) {
+          console.log(responce);
+        },
+        error: function error(responce) {
+          console.log(responce);
+        }
+      });
+    }
+  }, {
+    key: "deleteLike",
+    value: function deleteLike() {
+      _jquery.default.ajax({
+        url: blogData.root_url + '/wp-json/blog/v1/manageLike',
+        tupe: 'DELETE',
+        success: function success(responce) {
+          console.log(responce);
+        },
+        error: function error(responce) {
+          console.log(responce);
+        }
+      });
+    }
+  }]);
+
+  return Like;
+}();
+
+var _default = Like;
 exports.default = _default;
 
 /***/ })

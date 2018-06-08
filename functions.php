@@ -2,6 +2,9 @@
 /*hide admin bar*/ 
 show_admin_bar(false);
 
+//export custom api url
+require get_theme_file_path('/inc/like-route.php');
+
 // Styles & Scripts linking
 function blog_files()
   {
@@ -10,6 +13,10 @@ function blog_files()
     wp_enqueue_script('main-blog-js', get_theme_file_uri('js/scripts-bundled.js'), NULL, microtime(), true);
     wp_enqueue_script('highlight-js', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js');
     wp_enqueue_style('highlight-css', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css');
+    wp_localize_script('main-blog-js', 'blogData', array(
+    'root_url' => get_site_url(),
+    'nonce' => wp_create_nonce('wp_rest')
+    ));
 
   }
 add_action('wp_enqueue_scripts', 'blog_files');
