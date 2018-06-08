@@ -203,7 +203,6 @@ ul
 		height: 40px
 		background-color: $white
 		font-size: 12px
-		// line-height: 40px
 		color: $accent
 		text-align: center
 		z-index: 10
@@ -213,7 +212,6 @@ ul
 			line-height: none
 	.user-box
 		display: flex
-		// display: none
 		flex-direction: column
 		justify-content: space-around
 		position: absolute
@@ -501,11 +499,36 @@ ul
 					display: flex
 					justify-content: flex-end
 					align-items: center
-					.far
-						font-size: 12px
-						&:hover
+					.star-box
+						display: flex
+						.far,.fas
+							font-size: 12px
+							&:hover
+								color: $accent
+								cursor: pointer
+						.far
+							transition: all .35s ease-out
+						.fas
 							color: $accent
-							cursor: pointer
+							position: absolute
+							right: 44px
+							transition: all .4s ease-out
+							transform: scale(.2)
+							opacity: 0
+						.star-count
+							font-size: 10px
+							line-height: 12px
+							margin-left: -3px
+					.star-box[data-exists="yes"]
+						.far
+							visibility: hidden
+							opacity: 0
+					.star-box[data-exists="yes"]
+						.fas
+							visibility: visible
+							opacity: 1
+							transform: scale(1)
+							
 
 /* END POST ITEM */			
 

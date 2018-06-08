@@ -102,9 +102,9 @@ $(".category-item").addClass("animated bounceInDown");
 $(".post-img").on("click", function(){
 	$(".post-item").addClass("animated slideOutRight")
 });
-$(".post-inf").on("click", function(){
-	$(".post-item").addClass("animated slideOutRight")
-}); 
+// $(".post-inf").on("click", function(){
+// 	$(".post-item").addClass("animated slideOutRight")
+// }); 
 
 $(".category-item").on("click", function(){
 	$(this).addClass("animated slideOutRight")
@@ -132,9 +132,6 @@ $('pre code').each(function(i, block) {
 			if ($(".user-box").is(":visible")) {
 				$(".user-box").fadeOut(600);
 				
-				// $(".user-box").addClass("hidden");
-
-
 			} else {
 				$(".user-box").fadeIn(600).css("display", "flex");
 				$(".user-box").removeClass("hidden");

@@ -660,11 +660,44 @@ ul {
           -webkit-align-items: center;
               -ms-flex-align: center;
                   align-items: center; }
-          .post-item .post-text-wrap .post-text-small .post-footer .post-action .far {
-            font-size: 12px; }
-            .post-item .post-text-wrap .post-text-small .post-footer .post-action .far:hover {
+          .post-item .post-text-wrap .post-text-small .post-footer .post-action .star-box {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex; }
+            .post-item .post-text-wrap .post-text-small .post-footer .post-action .star-box .far, .post-item .post-text-wrap .post-text-small .post-footer .post-action .star-box .fas {
+              font-size: 12px; }
+              .post-item .post-text-wrap .post-text-small .post-footer .post-action .star-box .far:hover, .post-item .post-text-wrap .post-text-small .post-footer .post-action .star-box .fas:hover {
+                color: #28B78C;
+                cursor: pointer; }
+            .post-item .post-text-wrap .post-text-small .post-footer .post-action .star-box .far {
+              -webkit-transition: all .35s ease-out;
+              -o-transition: all .35s ease-out;
+              transition: all .35s ease-out; }
+            .post-item .post-text-wrap .post-text-small .post-footer .post-action .star-box .fas {
               color: #28B78C;
-              cursor: pointer; }
+              position: absolute;
+              right: 44px;
+              -webkit-transition: all .4s ease-out;
+              -o-transition: all .4s ease-out;
+              transition: all .4s ease-out;
+              -webkit-transform: scale(0.2);
+                  -ms-transform: scale(0.2);
+                      transform: scale(0.2);
+              opacity: 0; }
+            .post-item .post-text-wrap .post-text-small .post-footer .post-action .star-box .star-count {
+              font-size: 10px;
+              line-height: 12px;
+              margin-left: -3px; }
+          .post-item .post-text-wrap .post-text-small .post-footer .post-action .star-box[data-exists="yes"] .far {
+            visibility: hidden;
+            opacity: 0; }
+          .post-item .post-text-wrap .post-text-small .post-footer .post-action .star-box[data-exists="yes"] .fas {
+            visibility: visible;
+            opacity: 1;
+            -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                    transform: scale(1); }
 
 /* END POST ITEM */
 /* PAGINATION */

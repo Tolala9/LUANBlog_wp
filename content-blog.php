@@ -66,7 +66,12 @@
 											</div>
 											
 											<div class="post-action">
-												<i class="far fa-share-square"></i><i class="far fa-star"></i>
+												<i class="far fa-share-square"></i>
+												<span class="star-box" data-exists="yes">
+													<i class="far fa-star"></i>
+													<i class="fas fa-star"></i>
+													<span class="star-count">10</span>
+												</span>
 											</div>
 										</div>
 

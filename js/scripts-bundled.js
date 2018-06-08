@@ -10584,10 +10584,10 @@ function () {
       (0, _jquery.default)(".category-item").addClass("animated bounceInDown");
       (0, _jquery.default)(".post-img").on("click", function () {
         (0, _jquery.default)(".post-item").addClass("animated slideOutRight");
-      });
-      (0, _jquery.default)(".post-inf").on("click", function () {
-        (0, _jquery.default)(".post-item").addClass("animated slideOutRight");
-      });
+      }); // $(".post-inf").on("click", function(){
+      // 	$(".post-item").addClass("animated slideOutRight")
+      // }); 
+
       (0, _jquery.default)(".category-item").on("click", function () {
         (0, _jquery.default)(this).addClass("animated slideOutRight");
       });
@@ -10608,7 +10608,7 @@ function () {
 
       (0, _jquery.default)(".user-icon").click(function () {
         if ((0, _jquery.default)(".user-box").is(":visible")) {
-          (0, _jquery.default)(".user-box").fadeOut(600); // $(".user-box").addClass("hidden");
+          (0, _jquery.default)(".user-box").fadeOut(600);
         } else {
           (0, _jquery.default)(".user-box").fadeIn(600).css("display", "flex");
           (0, _jquery.default)(".user-box").removeClass("hidden");
