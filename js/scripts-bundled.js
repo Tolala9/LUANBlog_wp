@@ -10564,17 +10564,17 @@ function () {
       /* end Active tab on menu */
 
       /* Preloader */
+      // $(window).on('load', function() {
+      // 	$('.preloader').delay(100).fadeOut('slow');
+      // });
 
-
-      (0, _jquery.default)(window).on('load', function () {
-        (0, _jquery.default)('.preloader').delay(100).fadeOut('slow');
-      });
       /* END Preloader */
 
       /* Preloader */
 
+
       var $loading = (0, _jquery.default)('.lds-wedges, .lds-css').delay(150).fadeOut('slow');
-      (0, _jquery.default)(document).ajaxStart(function () {
+      (0, _jquery.default)().ajaxStart(function () {
         $loading.show();
       }).ajaxStop(function () {
         $loading.hide();
@@ -10672,17 +10672,17 @@ function () {
       var currentStarBox = (0, _jquery.default)(e.target).closest(".star-box");
 
       if (currentStarBox.data('exist') == 'yes') {
-        this.deleteLike();
+        this.deleteLike(currentStarBox);
       } else {
-        this.createLike();
+        this.createLike(currentStarBox);
       }
     }
   }, {
     key: "createLike",
-    value: function createLike() {
+    value: function createLike(currentStarBox) {
       _jquery.default.ajax({
         url: blogData.root_url + '/wp-json/blog/v1/manageLike',
-        tupe: 'POST',
+        type: 'POST',
         success: function success(responce) {
           console.log(responce);
         },
@@ -10693,10 +10693,10 @@ function () {
     }
   }, {
     key: "deleteLike",
-    value: function deleteLike() {
+    value: function deleteLike(currentStarBox) {
       _jquery.default.ajax({
         url: blogData.root_url + '/wp-json/blog/v1/manageLike',
-        tupe: 'DELETE',
+        type: 'DELETE',
         success: function success(responce) {
           console.log(responce);
         },

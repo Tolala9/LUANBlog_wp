@@ -6,7 +6,7 @@ class Like{
 	}
 
 	events() {
-		$(".star-box").on("click", this.ourClickDispatcher.bind(this) );
+		$(".star-box").on("click", this.ourClickDispatcher.bind(this));
 	}
 
 	// Methods
@@ -15,16 +15,16 @@ class Like{
 		var currentStarBox = $(e.target).closest(".star-box");
 
 		if (currentStarBox.data('exist') == 'yes') {
-			this.deleteLike();
+			this.deleteLike(currentStarBox);
 		} else {
-			this.createLike();
+			this.createLike(currentStarBox);
 		}
 	}
 
-	createLike() {
+	createLike(currentStarBox) {
 		$.ajax({
 		url: blogData.root_url + '/wp-json/blog/v1/manageLike',
-		tupe: 'POST',
+		type: 'POST',
 		success: (responce) => {
 			console.log(responce);
 		},
@@ -35,10 +35,10 @@ class Like{
 	});
 	}
 
-	deleteLike() {
+	deleteLike(currentStarBox) {
 		$.ajax({
 		url: blogData.root_url + '/wp-json/blog/v1/manageLike',
-		tupe: 'DELETE',
+		type: 'DELETE',
 		success: (responce) => {
 			console.log(responce);
 		},

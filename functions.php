@@ -1,9 +1,10 @@
 <?php 
-/*hide admin bar*/ 
-show_admin_bar(false);
 
 //export custom api url
 require get_theme_file_path('/inc/like-route.php');
+
+/*hide admin bar*/ 
+show_admin_bar(false);
 
 // Styles & Scripts linking
 function blog_files()

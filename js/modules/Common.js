@@ -79,14 +79,14 @@ class Common {
 /* end Active tab on menu */
 
 /* Preloader */
-$(window).on('load', function() {
-	$('.preloader').delay(100).fadeOut('slow');
-});
+// $(window).on('load', function() {
+// 	$('.preloader').delay(100).fadeOut('slow');
+// });
 /* END Preloader */
 
 /* Preloader */
 var $loading = $('.lds-wedges, .lds-css').delay(150).fadeOut('slow');
-$(document)
+$()
 .ajaxStart(function () {
 	$loading.show();
 })
