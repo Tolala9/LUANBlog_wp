@@ -1265,6 +1265,7 @@ $h: 3px
 				height: 1px
 				margin: 0 20px 
 			.post-footer-postpage
+				display: flex
 				margin: 5px 20px 10px
 				font-size: 14px
 				color: $light_text
@@ -1278,13 +1279,44 @@ $h: 3px
 					&:hover
 						color: $accent
 				.post-action-postpage
-					display: inline-block
-					float: right
-					.far
-						font-size: 12px
-						&:hover
+					flex: 1
+					display: flex
+					justify-content: flex-end
+					align-items: center
+					.star-box
+						display: flex
+						.far,.fas
+							font-size: 12px
+							margin-left: 7px
+							&:hover
+								color: $accent
+								cursor: pointer
+						.far
+							transition: all .35s ease-out
+						.fas
 							color: $accent
-							cursor: pointer
+							position: absolute
+							right: 44px
+							transition: all .4s ease-out
+							transform: scale(.2)
+							opacity: 0
+						.star-count
+							font-size: 10px
+							line-height: 12px
+							margin-left: -3px
+					.star-box[data-exist="yes"]
+						.far
+							visibility: hidden
+							opacity: 0
+					.star-box[data-exist="yes"]
+						.fas
+							visibility: visible
+							opacity: 1
+							transform: scale(1)
+							// margin-right: -3px
+					.star-box[data-exist="no"]
+						.fas
+							// margin-right: -3px
 
 
 

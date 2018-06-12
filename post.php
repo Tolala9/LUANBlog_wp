@@ -47,9 +47,15 @@
 										<div class="gray-line"></div>
 										<div class="post-footer-postpage"> 
 											<i class="far fa-user"></i><a href="#">By Anatolii </a>
+											
 											<div class="post-action-postpage">
-												<i class="far fa-share-square"></i><i class="far fa-star"></i>
+												<i class="far fa-share-square"></i>
+												<i class="far fa-star"></i>
+												
 											</div>
+
+											
+
 										</div>
 									</div>
 								</div>

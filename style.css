@@ -1579,6 +1579,10 @@ ul {
         height: 1px;
         margin: 0 20px; }
       .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
         margin: 5px 20px 10px;
         font-size: 14px;
         color: #8a959b; }
@@ -1594,13 +1598,61 @@ ul {
           .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage a:hover {
             color: #28B78C; }
         .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage {
-          display: inline-block;
-          float: right; }
-          .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .far {
-            font-size: 12px; }
-            .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .far:hover {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+          -webkit-justify-content: flex-end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .star-box {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex; }
+            .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .star-box .far, .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .star-box .fas {
+              font-size: 12px;
+              margin-left: 7px; }
+              .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .star-box .far:hover, .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .star-box .fas:hover {
+                color: #28B78C;
+                cursor: pointer; }
+            .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .star-box .far {
+              -webkit-transition: all .35s ease-out;
+              -o-transition: all .35s ease-out;
+              transition: all .35s ease-out; }
+            .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .star-box .fas {
               color: #28B78C;
-              cursor: pointer; }
+              position: absolute;
+              right: 44px;
+              -webkit-transition: all .4s ease-out;
+              -o-transition: all .4s ease-out;
+              transition: all .4s ease-out;
+              -webkit-transform: scale(0.2);
+                  -ms-transform: scale(0.2);
+                      transform: scale(0.2);
+              opacity: 0; }
+            .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .star-box .star-count {
+              font-size: 10px;
+              line-height: 12px;
+              margin-left: -3px; }
+          .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .star-box[data-exist="yes"] .far {
+            visibility: hidden;
+            opacity: 0; }
+          .post-item-postpage .post-text-wrap-postpage .post-text-small-postpage .post-footer-postpage .post-action-postpage .star-box[data-exist="yes"] .fas {
+            visibility: visible;
+            opacity: 1;
+            -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                    transform: scale(1); }
 
 /* ********** END POST PAGE STYLE ************* */
 /* ********** ARCHIVE WP PAGE STLE ************* */
