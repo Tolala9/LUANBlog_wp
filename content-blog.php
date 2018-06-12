@@ -69,19 +69,21 @@
 												<i class="far fa-share-square"></i>
 
 												<?php 
-													$likeCount =new Wp_Query(array(
-														'post_type' => 'like',
-														'meta_query' => array(
-															array(
-																'key' => 'liked_post_id',
-																'compare' => '=',
-																'value' => get_the_ID()
+												$likeCount =new Wp_Query(array(
+													'post_type' => 'like',
+													'meta_query' => array(
+														array(
+															'key' => 'liked_post_id',
+															'compare' => '=',
+															'value' => get_the_ID()
 
-															)
 														)
-													));
+													)
+												));
 
-													$existStatus = 'no';
+												$existStatus = 'no';
+
+												if (is_user_logged_in()) {
 
 													$existQuery =new Wp_Query(array(
 														'author' => get_current_user_id(),
@@ -99,10 +101,13 @@
 													if ($existQuery->found_posts) {
 														$existStatus = 'yes';
 													}
+												}
 
-												 ?>
 
-												<span class="star-box" data-exist="<?php  echo $existStatus;?>">
+
+												?><?php  ?>
+
+												<span class="star-box" data-star="<?php echo $existQuery->posts[0]->ID; ?>" data-post="<?php the_ID(); ?>" data-exist="<?php  echo $existStatus;?>">
 													<i class="far fa-star"></i>
 													<i class="fas fa-star"></i>
 													<span class="star-count"><?php echo $likeCount->found_posts; ?></span>

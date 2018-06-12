@@ -10671,7 +10671,7 @@ function () {
     value: function ourClickDispatcher(e) {
       var currentStarBox = (0, _jquery.default)(e.target).closest(".star-box");
 
-      if (currentStarBox.data('exist') == 'yes') {
+      if (currentStarBox.attr('data-exist') == 'yes') {
         this.deleteLike(currentStarBox);
       } else {
         this.createLike(currentStarBox);
@@ -10681,9 +10681,20 @@ function () {
     key: "createLike",
     value: function createLike(currentStarBox) {
       _jquery.default.ajax({
+        beforeSend: function beforeSend(xhr) {
+          xhr.setRequestHeader('X-WP-Nonce', blogData.nonce);
+        },
         url: blogData.root_url + '/wp-json/blog/v1/manageLike',
         type: 'POST',
+        data: {
+          'postId': currentStarBox.data('post')
+        },
         success: function success(responce) {
+          currentStarBox.attr('data-exist', 'yes');
+          var likeCount = parseInt(currentStarBox.find(".star-count").html(), 10);
+          likeCount++;
+          currentStarBox.find(".star-count").html(likeCount);
+          currentStarBox.attr("data-star", responce);
           console.log(responce);
         },
         error: function error(responce) {
@@ -10695,9 +10706,20 @@ function () {
     key: "deleteLike",
     value: function deleteLike(currentStarBox) {
       _jquery.default.ajax({
+        beforeSend: function beforeSend(xhr) {
+          xhr.setRequestHeader('X-WP-Nonce', blogData.nonce);
+        },
         url: blogData.root_url + '/wp-json/blog/v1/manageLike',
         type: 'DELETE',
+        data: {
+          'like': currentStarBox.attr('data-star')
+        },
         success: function success(responce) {
+          currentStarBox.attr('data-exist', 'no');
+          var likeCount = parseInt(currentStarBox.find(".star-count").html(), 10);
+          likeCount--;
+          currentStarBox.find(".star-count").html(likeCount);
+          currentStarBox.attr("data-star", '');
           console.log(responce);
         },
         error: function error(responce) {
