@@ -1205,7 +1205,8 @@ ul {
     background-color: #e7efee;
     width: 100%; }
   .archive-item-recentpost .arch-item-content, .archive-item-featurepost .arch-item-content, .archive-item-categories .arch-item-content, .archive-item-search .arch-item-content, .archive-item-tags .arch-item-content, .archive-item-popularpost .arch-item-content, .archive-item-socials .arch-item-content {
-    padding: 5px 8px 15px; }
+    padding: 5px 8px 15px;
+    margin-bottom: 40px; }
     .archive-item-recentpost .arch-item-content ul, .archive-item-featurepost .arch-item-content ul, .archive-item-categories .arch-item-content ul, .archive-item-search .arch-item-content ul, .archive-item-tags .arch-item-content ul, .archive-item-popularpost .arch-item-content ul, .archive-item-socials .arch-item-content ul {
       list-style-type: circle;
       margin-left: 25px; }
