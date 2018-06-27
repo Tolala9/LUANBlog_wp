@@ -1188,7 +1188,7 @@ ul {
 .archive-item {
   margin-top: 40px;
   background-color: #FAFAFA; }
-  .archive-item-recentpost .arch-item-title a, .archive-item-featurepost .arch-item-title a, .archive-item-categories .arch-item-title a, .archive-item-search .arch-item-title a, .archive-item-tags .arch-item-title a, .archive-item-popularpost .arch-item-title a, .archive-item-socials .arch-item-title a {
+  .archive-item-recentpost .arch-item-title a, .archive-item-staredpost .arch-item-title a, .archive-item-featurepost .arch-item-title a, .archive-item-categories .arch-item-title a, .archive-item-search .arch-item-title a, .archive-item-tags .arch-item-title a, .archive-item-popularpost .arch-item-title a, .archive-item-socials .arch-item-title a {
     display: block;
     text-align: center;
     color: #27323a;
@@ -1198,22 +1198,22 @@ ul {
     -webkit-transition: ease 0.3s;
     -o-transition: ease 0.3s;
     transition: ease 0.3s; }
-    .archive-item-recentpost .arch-item-title a:hover, .archive-item-featurepost .arch-item-title a:hover, .archive-item-categories .arch-item-title a:hover, .archive-item-search .arch-item-title a:hover, .archive-item-tags .arch-item-title a:hover, .archive-item-popularpost .arch-item-title a:hover, .archive-item-socials .arch-item-title a:hover {
+    .archive-item-recentpost .arch-item-title a:hover, .archive-item-staredpost .arch-item-title a:hover, .archive-item-featurepost .arch-item-title a:hover, .archive-item-categories .arch-item-title a:hover, .archive-item-search .arch-item-title a:hover, .archive-item-tags .arch-item-title a:hover, .archive-item-popularpost .arch-item-title a:hover, .archive-item-socials .arch-item-title a:hover {
       color: #28B78C; }
-  .archive-item-recentpost .gray-line, .archive-item-featurepost .gray-line, .archive-item-categories .gray-line, .archive-item-search .gray-line, .archive-item-tags .gray-line, .archive-item-popularpost .gray-line, .archive-item-socials .gray-line {
+  .archive-item-recentpost .gray-line, .archive-item-staredpost .gray-line, .archive-item-featurepost .gray-line, .archive-item-categories .gray-line, .archive-item-search .gray-line, .archive-item-tags .gray-line, .archive-item-popularpost .gray-line, .archive-item-socials .gray-line {
     height: 1px;
     background-color: #e7efee;
     width: 100%; }
-  .archive-item-recentpost .arch-item-content, .archive-item-featurepost .arch-item-content, .archive-item-categories .arch-item-content, .archive-item-search .arch-item-content, .archive-item-tags .arch-item-content, .archive-item-popularpost .arch-item-content, .archive-item-socials .arch-item-content {
+  .archive-item-recentpost .arch-item-content, .archive-item-staredpost .arch-item-content, .archive-item-featurepost .arch-item-content, .archive-item-categories .arch-item-content, .archive-item-search .arch-item-content, .archive-item-tags .arch-item-content, .archive-item-popularpost .arch-item-content, .archive-item-socials .arch-item-content {
     padding: 5px 8px 15px;
     margin-bottom: 40px; }
-    .archive-item-recentpost .arch-item-content ul, .archive-item-featurepost .arch-item-content ul, .archive-item-categories .arch-item-content ul, .archive-item-search .arch-item-content ul, .archive-item-tags .arch-item-content ul, .archive-item-popularpost .arch-item-content ul, .archive-item-socials .arch-item-content ul {
+    .archive-item-recentpost .arch-item-content ul, .archive-item-staredpost .arch-item-content ul, .archive-item-featurepost .arch-item-content ul, .archive-item-categories .arch-item-content ul, .archive-item-search .arch-item-content ul, .archive-item-tags .arch-item-content ul, .archive-item-popularpost .arch-item-content ul, .archive-item-socials .arch-item-content ul {
       list-style-type: circle;
       margin-left: 25px; }
-      .archive-item-recentpost .arch-item-content ul li, .archive-item-featurepost .arch-item-content ul li, .archive-item-categories .arch-item-content ul li, .archive-item-search .arch-item-content ul li, .archive-item-tags .arch-item-content ul li, .archive-item-popularpost .arch-item-content ul li, .archive-item-socials .arch-item-content ul li {
+      .archive-item-recentpost .arch-item-content ul li, .archive-item-staredpost .arch-item-content ul li, .archive-item-featurepost .arch-item-content ul li, .archive-item-categories .arch-item-content ul li, .archive-item-search .arch-item-content ul li, .archive-item-tags .arch-item-content ul li, .archive-item-popularpost .arch-item-content ul li, .archive-item-socials .arch-item-content ul li {
         margin: 0;
         padding: 0; }
-        .archive-item-recentpost .arch-item-content ul li a, .archive-item-featurepost .arch-item-content ul li a, .archive-item-categories .arch-item-content ul li a, .archive-item-search .arch-item-content ul li a, .archive-item-tags .arch-item-content ul li a, .archive-item-popularpost .arch-item-content ul li a, .archive-item-socials .arch-item-content ul li a {
+        .archive-item-recentpost .arch-item-content ul li a, .archive-item-staredpost .arch-item-content ul li a, .archive-item-featurepost .arch-item-content ul li a, .archive-item-categories .arch-item-content ul li a, .archive-item-search .arch-item-content ul li a, .archive-item-tags .arch-item-content ul li a, .archive-item-popularpost .arch-item-content ul li a, .archive-item-socials .arch-item-content ul li a {
           display: block;
           font-size: 14px;
           font-weight: 300;
@@ -1223,12 +1223,16 @@ ul {
           -o-transition: ease 0.3s;
           transition: ease 0.3s;
           letter-spacing: .6px; }
-          .archive-item-recentpost .arch-item-content ul li a:hover, .archive-item-featurepost .arch-item-content ul li a:hover, .archive-item-categories .arch-item-content ul li a:hover, .archive-item-search .arch-item-content ul li a:hover, .archive-item-tags .arch-item-content ul li a:hover, .archive-item-popularpost .arch-item-content ul li a:hover, .archive-item-socials .arch-item-content ul li a:hover {
+          .archive-item-recentpost .arch-item-content ul li a:hover, .archive-item-staredpost .arch-item-content ul li a:hover, .archive-item-featurepost .arch-item-content ul li a:hover, .archive-item-categories .arch-item-content ul li a:hover, .archive-item-search .arch-item-content ul li a:hover, .archive-item-tags .arch-item-content ul li a:hover, .archive-item-popularpost .arch-item-content ul li a:hover, .archive-item-socials .arch-item-content ul li a:hover {
             color: #28B78C;
             font-weight: 400;
             letter-spacing: .8px; }
-      .archive-item-recentpost .arch-item-content ul .gray-line, .archive-item-featurepost .arch-item-content ul .gray-line, .archive-item-categories .arch-item-content ul .gray-line, .archive-item-search .arch-item-content ul .gray-line, .archive-item-tags .arch-item-content ul .gray-line, .archive-item-popularpost .arch-item-content ul .gray-line, .archive-item-socials .arch-item-content ul .gray-line {
+      .archive-item-recentpost .arch-item-content ul .gray-line, .archive-item-staredpost .arch-item-content ul .gray-line, .archive-item-featurepost .arch-item-content ul .gray-line, .archive-item-categories .arch-item-content ul .gray-line, .archive-item-search .arch-item-content ul .gray-line, .archive-item-tags .arch-item-content ul .gray-line, .archive-item-popularpost .arch-item-content ul .gray-line, .archive-item-socials .arch-item-content ul .gray-line {
         margin-top: 10px; }
+
+.archive-item-staredpost .arch-item-content ul {
+  color: #28B78C;
+  list-style-type: square; }
 
 .archive-item-categories .arch-item-content a {
   text-transform: uppercase; }

@@ -11,7 +11,7 @@
 
 				<div class="archive-item archive-item-recentpost">
 					<div class="arch-item-title"><a href="<?php echo site_url('/blog/') ?>">
-						5 Recent Posts
+						5 Freshest Posts
 					</a></div>
 					<div class="gray-line"></div>
 					<div class="arch-item-content">
@@ -38,6 +38,60 @@
 						</ul>
 
 					</div>
+				</div>
+
+				<div class="archive-item archive-item-staredpost">
+
+					<div class="arch-item-title"><a title="View your all stared posts" href="<?php echo site_url('/stared-posts/') ?>">
+						Your stared posts
+					</a></div>
+					<div class="gray-line"></div>
+					<div class="arch-item-content">
+						<ul>
+
+							<?php
+							if ( is_user_logged_in() ){
+
+								global $current_user;
+								wp_get_current_user();
+
+								$MyLikedPost = new Wp_Query(array(
+									'posts_per_page' => 4,
+									'post_type' => 'like',
+									'meta_key' => 'liked_post_id',
+									'order' => 'DESC',
+									'author' => $current_user->ID,
+								));
+
+
+								while ($MyLikedPost->have_posts()) {
+									$MyLikedPost->the_post();
+
+									$likePostID = get_field('liked_post_id');
+									?>
+
+
+									<li><a href="<?php echo get_permalink($likePostID);?>" title=""><?php echo get_post_field('post_title', $likePostID); ?></a></li>
+									<div class="gray-line"></div>
+
+									<?php
+								}
+
+							}
+
+							else {
+
+									?>
+									<li><a href="<?php echo wp_login_url(); ?>" title="You are not logged in">Sory, You are not logged in!</a></li>
+									<?php
+								}
+
+							?>
+
+						</ul>
+
+					</div>
+
 				</div>
 
 
