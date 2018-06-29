@@ -10537,6 +10537,12 @@ function () {
 
         ;
       });
+      (0, _jquery.default)(document).click(function (event) {
+        //if you click on anything except the modal itself or the "open modal" link, close the modal
+        if (!(0, _jquery.default)(event.target).closest(".search-field,.search-box").length) {
+          (0, _jquery.default)("body").find(".search-field").fadeOut(600);
+        }
+      });
       /* END SEARCH FIELD */
 
       /* SEARCH FIELD for xs devices */
@@ -10553,22 +10559,6 @@ function () {
         });
       } else {}
       /* END SEARCH FIELD  for xs devices*/
-
-      /* Active tab on menu */
-      // $(".menu-line ul li").click(function () {
-      //     $(".menu-line ul li").removeClass("active");
-      //     $(".menu-line-footer ul li").removeClass("active");
-      //     $(this).addClass("active");   
-      // });
-
-      /* end Active tab on menu */
-
-      /* Preloader */
-      // $(window).on('load', function() {
-      // 	$('.preloader').delay(100).fadeOut('slow');
-      // });
-
-      /* END Preloader */
 
       /* Preloader */
 
@@ -10587,10 +10577,7 @@ function () {
       (0, _jquery.default)(".category-item").addClass("animated bounceInDown");
       (0, _jquery.default)(".post-img").on("click", function () {
         (0, _jquery.default)(".post-item").addClass("animated slideOutRight");
-      }); // $(".post-inf").on("click", function(){
-      // 	$(".post-item").addClass("animated slideOutRight")
-      // }); 
-
+      });
       (0, _jquery.default)(".category-item").on("click", function () {
         (0, _jquery.default)(this).addClass("animated slideOutRight");
       });
@@ -10619,7 +10606,33 @@ function () {
 
         ;
       });
+      (0, _jquery.default)(document).click(function (event) {
+        //if you click on anything except the modal itself or the "open modal" link, close the modal
+        if (!(0, _jquery.default)(event.target).closest(".user-box,.user-icon").length) {
+          (0, _jquery.default)("body").find(".user-box").fadeOut(600);
+        }
+      });
       /* END USER FIELD */
+
+      /* Share button */
+
+      (0, _jquery.default)(".post-box").click(function () {
+        if ((0, _jquery.default)(".post-box-wrap").is(":visible")) {
+          (0, _jquery.default)(".post-box-wrap").fadeOut(600);
+        } else {
+          (0, _jquery.default)(".post-box-wrap").fadeIn(600);
+          (0, _jquery.default)(".post-box-wrap").removeClass("hidden");
+        }
+
+        ;
+      });
+      (0, _jquery.default)(document).click(function (event) {
+        //if you click on anything except the modal itself or the "open modal" link, close the modal
+        if (!(0, _jquery.default)(event.target).closest(".post-box-wrap,.post-box").length) {
+          (0, _jquery.default)("body").find(".post-box-wrap").addClass("hidden");
+        }
+      });
+      /* END Share button */
     }
   }]);
 

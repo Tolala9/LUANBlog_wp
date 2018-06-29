@@ -66,7 +66,28 @@
 											</div>
 											
 											<div class="post-action">
-												<i class="far fa-share-square"></i>
+
+												<div class="post-box">
+													<i class="far fa-share-square" title="Share"></i>
+													<div class="post-box-wrap hidden">
+														<?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { 
+															ADDTOANY_SHARE_SAVE_KIT( array( 
+																'buttons' => array( 
+																	'facebook', 
+																	'copy_link',
+																	'pocket', 
+																),
+															) );
+														} 
+														?> 
+													</div>
+												</div>
+
+
+
+
+
+
 
 												<?php 
 												$likeCount =new Wp_Query(array(

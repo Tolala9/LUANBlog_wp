@@ -660,6 +660,40 @@ ul {
           -webkit-align-items: center;
               -ms-flex-align: center;
                   align-items: center; }
+          .post-item .post-text-wrap .post-text-small .post-footer .post-action .post-box {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-transition: ease 0.3s;
+            -o-transition: ease 0.3s;
+            transition: ease 0.3s; }
+            .post-item .post-text-wrap .post-text-small .post-footer .post-action .post-box .far, .post-item .post-text-wrap .post-text-small .post-footer .post-action .post-box .fas {
+              font-size: 12px;
+              margin-left: 7px;
+              line-height: 20px; }
+              .post-item .post-text-wrap .post-text-small .post-footer .post-action .post-box .far:hover, .post-item .post-text-wrap .post-text-small .post-footer .post-action .post-box .fas:hover {
+                color: #28B78C;
+                cursor: pointer; }
+            .post-item .post-text-wrap .post-text-small .post-footer .post-action .post-box-wrap {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              width: 90px;
+              height: 20px;
+              z-index: 1000; }
+              .post-item .post-text-wrap .post-text-small .post-footer .post-action .post-box-wrap .a2a_kit {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                background-color: #fff; }
+                .post-item .post-text-wrap .post-text-small .post-footer .post-action .post-box-wrap .a2a_kit a {
+                  -webkit-box-flex: 1;
+                  -webkit-flex: 1;
+                      -ms-flex: 1;
+                          flex: 1; }
           .post-item .post-text-wrap .post-text-small .post-footer .post-action .star-box {
             display: -webkit-box;
             display: -webkit-flex;

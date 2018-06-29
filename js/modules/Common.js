@@ -4,7 +4,7 @@ class Common {
 	constructor() {
 		this.allMethods();  
 	}
-  
+
 	allMethods() {
 		/*TOGGLE MENU*/
 
@@ -53,6 +53,13 @@ class Common {
 
 			};
 		}); 
+
+		$(document).click(function(event) {
+  //if you click on anything except the modal itself or the "open modal" link, close the modal
+  if (!$(event.target).closest(".search-field,.search-box").length) {
+    $("body").find(".search-field").fadeOut(600);
+  }
+});
 		/* END SEARCH FIELD */
 
 		/* SEARCH FIELD for xs devices */
@@ -68,21 +75,10 @@ class Common {
 		}
 		else	{
 		}
+
 		/* END SEARCH FIELD  for xs devices*/
 
-		/* Active tab on menu */
-// $(".menu-line ul li").click(function () {
-//     $(".menu-line ul li").removeClass("active");
-//     $(".menu-line-footer ul li").removeClass("active");
-//     $(this).addClass("active");   
-// });
-/* end Active tab on menu */
-
-/* Preloader */
-// $(window).on('load', function() {
-// 	$('.preloader').delay(100).fadeOut('slow');
-// });
-/* END Preloader */
+		
 
 /* Preloader */
 var $loading = $('.lds-wedges, .lds-css').delay(150).fadeOut('slow');
@@ -102,9 +98,7 @@ $(".category-item").addClass("animated bounceInDown");
 $(".post-img").on("click", function(){
 	$(".post-item").addClass("animated slideOutRight")
 });
-// $(".post-inf").on("click", function(){
-// 	$(".post-item").addClass("animated slideOutRight")
-// }); 
+ 
 
 $(".category-item").on("click", function(){
 	$(this).addClass("animated slideOutRight")
@@ -127,18 +121,48 @@ $('pre code').each(function(i, block) {
 });
 
 /* USER FIELD */
-		$(".user-icon").click(function(){
+$(".user-icon").click(function(){
 
-			if ($(".user-box").is(":visible")) {
-				$(".user-box").fadeOut(600);
-				
-			} else {
-				$(".user-box").fadeIn(600).css("display", "flex");
-				$(".user-box").removeClass("hidden");
+	if ($(".user-box").is(":visible")) {
+		$(".user-box").fadeOut(600);
 
-			};
-		}); 
-		/* END USER FIELD */
+	} else {
+		$(".user-box").fadeIn(600).css("display", "flex");
+		$(".user-box").removeClass("hidden");
+
+	};
+}); 
+
+$(document).click(function(event) {
+  //if you click on anything except the modal itself or the "open modal" link, close the modal
+  if (!$(event.target).closest(".user-box,.user-icon").length) {
+    $("body").find(".user-box").fadeOut(600);
+  }
+});
+/* END USER FIELD */
+
+
+/* Share button */
+
+$(".post-box").click(function(){
+
+	if ($(".post-box-wrap").is(":visible")) {
+		$(".post-box-wrap").fadeOut(600);
+
+	} else {
+		$(".post-box-wrap").fadeIn(600);
+		$(".post-box-wrap").removeClass("hidden");
+
+	};
+}); 
+
+$(document).click(function(event) {
+  //if you click on anything except the modal itself or the "open modal" link, close the modal
+  if (!$(event.target).closest(".post-box-wrap,.post-box").length) {
+    $("body").find(".post-box-wrap").addClass("hidden");
+  }
+});
+/* END Share button */
 
 
 
