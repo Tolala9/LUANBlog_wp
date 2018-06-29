@@ -76,7 +76,22 @@ get_header(); ?>
 												<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><i class="far fa-user"></i></a><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">By <?php the_author() ?></a>
 											</div>
 											<div class="post-action-postpage">
-												<i class="far fa-share-square"></i>
+												
+												<div class="post-box">
+													<i class="far fa-share-square" title="Share"></i>
+													<div class="post-box-wrap hidden">
+														<?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { 
+															ADDTOANY_SHARE_SAVE_KIT( array( 
+																'buttons' => array( 
+																	'facebook', 
+																	'copy_link',
+																	'pocket', 
+																),
+															) );
+														} 
+														?> 
+													</div>
+												</div>
 												
 												<?php 
 												$likeCount =new Wp_Query(array(
